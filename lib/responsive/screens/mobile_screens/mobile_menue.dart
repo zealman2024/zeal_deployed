@@ -64,7 +64,7 @@ class MobileMenueScreen extends StatelessWidget {
                       child: const Text(
                         'Home',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 20,
                           color: textColor,
                           fontWeight: FontWeight.w600,
                         ),
@@ -91,7 +91,7 @@ class MobileMenueScreen extends StatelessWidget {
                       child: const Text(
                         'Products & Services',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 20,
                           color: textColor,
                           fontWeight: FontWeight.w600,
                         ),
@@ -118,7 +118,7 @@ class MobileMenueScreen extends StatelessWidget {
                       child: const Text(
                         'Facilities',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 20,
                           color: textColor,
                           fontWeight: FontWeight.w600,
                         ),
@@ -145,7 +145,7 @@ class MobileMenueScreen extends StatelessWidget {
                       child: const Text(
                         'About',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 20,
                           color: textColor,
                           fontWeight: FontWeight.w600,
                         ),

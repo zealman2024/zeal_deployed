@@ -54,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         .copyWith(top: 100),
                     child: const Text(
                       textAlign: TextAlign.center,
-                      "Zeal Manufacturing Company is an ISO 9001-2015 certified company, specializing in sheet metal fabrication forall types of industrial requirements in light, medium, and heavy categories.",
+                      "Zeal Manufacturing Company is an ISO 9001-2015 certified company, specializing in sheet metal fabrication for all types of industrial requirements in light, medium, and heavy categories.",
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.normal,
@@ -84,233 +84,45 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   const SizedBox(height: 62),
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
+                      Text(
                         "Areas of Service",
                         style: TextStyle(
-                          fontSize: 28,
+                          fontSize: 24,
                           color: textColor,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
-                      LayoutBuilder(
-                        builder:
-                            (BuildContext context, BoxConstraints constraints) {
-                          if (constraints.maxWidth > 1300) {
-                            return GridView.count(
-                              padding: const EdgeInsets.only(top: 26),
-                              physics: const NeverScrollableScrollPhysics(),
-                              childAspectRatio: 13 / 17,
-                              crossAxisCount: 4,
-                              shrinkWrap: true,
-                              crossAxisSpacing: 16,
-                              children: const [
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/defence.png",
-                                    text: "Defense Sector"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/hydrolics.png",
-                                    text: "Industrial Hydraulics"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/medical.png",
-                                    text: "Medical Electronics"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/airports.png",
-                                    text: "Infrastructure-Airports"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/food.png",
-                                    text: "Food Industry"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/architecture.png",
-                                    text: "Architecture"),
-                              ],
-                            );
-                          } else if (constraints.maxWidth > 1000) {
-                            return GridView.count(
-                              padding: const EdgeInsets.only(top: 26),
-                              physics: const NeverScrollableScrollPhysics(),
-                              childAspectRatio: 1.7 / 4,
-                              crossAxisCount: 4,
-                              shrinkWrap: true,
-                              crossAxisSpacing: 16,
-                              children: const [
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/defence.png",
-                                    text: "Defense Sector"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/hydrolics.png",
-                                    text: "Industrial Hydraulics"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/medical.png",
-                                    text: "Medical Electronics"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/airports.png",
-                                    text: "Infrastructure-Airports"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/food.png",
-                                    text: "Food Industry"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/architecture.png",
-                                    text: "Architecture"),
-                              ],
-                            );
-                          } else if (constraints.maxWidth > 950) {
-                            return GridView.count(
-                              padding: const EdgeInsets.only(top: 26),
-                              physics: const NeverScrollableScrollPhysics(),
-                              childAspectRatio: 2 / 4,
-                              crossAxisCount: 4,
-                              shrinkWrap: true,
-                              crossAxisSpacing: 16,
-                              children: const [
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/defence.png",
-                                    text: "Defense Sector"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/hydrolics.png",
-                                    text: "Industrial Hydraulics"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/medical.png",
-                                    text: "Medical Electronics"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/airports.png",
-                                    text: "Infrastructure-Airports"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/food.png",
-                                    text: "Food Industry"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/architecture.png",
-                                    text: "Architecture"),
-                              ],
-                            );
-                          } else if (constraints.maxWidth > 850) {
-                            return GridView.count(
-                              padding: const EdgeInsets.only(top: 26),
-                              physics: const NeverScrollableScrollPhysics(),
-                              childAspectRatio: 2 / 4,
-                              crossAxisCount: 3,
-                              shrinkWrap: true,
-                              crossAxisSpacing: 16,
-                              children: const [
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/defence.png",
-                                    text: "Defense Sector"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/hydrolics.png",
-                                    text: "Industrial Hydraulics"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/medical.png",
-                                    text: "Medical Electronics"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/airports.png",
-                                    text: "Infrastructure-Airports"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/food.png",
-                                    text: "Food Industry"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/architecture.png",
-                                    text: "Architecture"),
-                              ],
-                            );
-                          } else if (constraints.maxWidth < 600) {
-                            return GridView.count(
-                              padding: const EdgeInsets.only(top: 26),
-                              physics: const NeverScrollableScrollPhysics(),
-                              childAspectRatio: 13 / 17,
-                              crossAxisCount: 2,
-                              shrinkWrap: true,
-                              crossAxisSpacing: 16,
-                              children: const [
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/defence.png",
-                                    text: "Defense Sector"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/hydrolics.png",
-                                    text: "Industrial Hydraulics"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/medical.png",
-                                    text: "Medical Electronics"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/airports.png",
-                                    text: "Infrastructure-Airports"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/food.png",
-                                    text: "Food Industry"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/architecture.png",
-                                    text: "Architecture"),
-                              ],
-                            );
-                          } else {
-                            return GridView.count(
-                              padding: const EdgeInsets.only(top: 26),
-                              physics: const NeverScrollableScrollPhysics(),
-                              childAspectRatio: 13 / 17,
-                              crossAxisCount: 2,
-                              shrinkWrap: true,
-                              crossAxisSpacing: 16,
-                              children: const [
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/defence.png",
-                                    text: "Defense Sector"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/hydrolics.png",
-                                    text: "Industrial Hydraulics"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/medical.png",
-                                    text: "Medical Electronics"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/airports.png",
-                                    text: "Infrastructure-Airports"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/food.png",
-                                    text: "Food Industry"),
-                                ProductsCard(
-                                    imagePath:
-                                        "assets/images/services/architecture.png",
-                                    text: "Architecture"),
-                              ],
-                            );
-                          }
-                        },
-                      ),
+                      SizedBox(height: 36),
+                      Wrap(
+                        spacing: 16,
+                        runSpacing: 24,
+                        alignment: WrapAlignment.start,
+                        crossAxisAlignment: WrapCrossAlignment.start,
+                        children: [
+                          ProductsCard(
+                              imagePath: "assets/images/services/defence.png",
+                              text: "Defense Sector"),
+                          ProductsCard(
+                              imagePath: "assets/images/services/hydrolics.png",
+                              text: "Industrial Hydraulics"),
+                          ProductsCard(
+                              imagePath: "assets/images/services/medical.png",
+                              text: "Medical Electronics"),
+                          ProductsCard(
+                              imagePath: "assets/images/services/airports.png",
+                              text: "Infrastructure-Airports"),
+                          ProductsCard(
+                              imagePath: "assets/images/services/food.png",
+                              text: "Food Industry"),
+                          ProductsCard(
+                              imagePath:
+                                  "assets/images/services/architecture.png",
+                              text: "Architecture"),
+                        ],
+                      )
                     ],
                   ),
                 ],

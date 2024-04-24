@@ -20,7 +20,7 @@ class FacilitiesScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Areas of Service",
+                    "Our Facilities",
                     style: TextStyle(
                       fontSize: 28,
                       color: textColor,

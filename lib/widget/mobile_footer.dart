@@ -256,8 +256,12 @@ class MobileFooter extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              Wrap(
+                alignment: WrapAlignment.start,
+                runAlignment: WrapAlignment.start,
+                runSpacing: 12,
+                spacing: 42,
+                crossAxisAlignment: WrapCrossAlignment.start,
                 children: [
                   GestureDetector(
                     onTap: () {

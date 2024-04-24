@@ -36,102 +36,125 @@ class _WebScreenLayoutState extends State<WebScreenLayout> {
         ),
         child: ClipRRect(
           child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+            filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
             child: AppBar(
-              title: GestureDetector(
-                onTap: () {
-                  tabController.selectedIndex.value == 0;
-                },
-                child: Image.asset(
-                  "assets/images/logo.png",
-                  height: 40,
-                ),
+              centerTitle: true,
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          tabController.selectedIndex.value == 0;
+                        },
+                        child: Image.asset(
+                          "assets/images/logo.png",
+                          height: 40,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Obx(
+                        () => GestureDetector(
+                          onTap: () {
+                            tabController.selectedIndex.value = 0;
+                          },
+                          child: Text(
+                            'Home',
+                            style: TextStyle(
+                              letterSpacing: 1.3,
+                              fontSize: tabController.selectedIndex.value == 0
+                                  ? 16
+                                  : 16,
+                              fontWeight: tabController.selectedIndex.value == 0
+                                  ? FontWeight.w600
+                                  : FontWeight.normal,
+                              color: tabController.selectedIndex.value == 0
+                                  ? mainColor
+                                  : const Color.fromARGB(255, 50, 50, 50),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 24),
+                      Obx(
+                        () => GestureDetector(
+                          onTap: () {
+                            tabController.selectedIndex.value = 1;
+                          },
+                          child: Text(
+                            'Products & Services',
+                            style: TextStyle(
+                              letterSpacing: 1.3,
+                              fontSize: tabController.selectedIndex.value == 1
+                                  ? 16
+                                  : 16,
+                              fontWeight: tabController.selectedIndex.value == 1
+                                  ? FontWeight.w600
+                                  : FontWeight.normal,
+                              color: tabController.selectedIndex.value == 1
+                                  ? mainColor
+                                  : const Color.fromARGB(255, 50, 50, 50),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 24),
+                      Obx(
+                        () => GestureDetector(
+                          onTap: () {
+                            tabController.selectedIndex.value = 2;
+                          },
+                          child: Text(
+                            'Facilities',
+                            style: TextStyle(
+                              letterSpacing: 1.3,
+                              fontSize: tabController.selectedIndex.value == 2
+                                  ? 16
+                                  : 16,
+                              fontWeight: tabController.selectedIndex.value == 2
+                                  ? FontWeight.w600
+                                  : FontWeight.normal,
+                              color: tabController.selectedIndex.value == 2
+                                  ? mainColor
+                                  : const Color.fromARGB(255, 50, 50, 50),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 24),
+                      Obx(
+                        () => GestureDetector(
+                          onTap: () {
+                            tabController.selectedIndex.value = 3;
+                          },
+                          child: Text(
+                            'About',
+                            style: TextStyle(
+                              fontSize: tabController.selectedIndex.value == 3
+                                  ? 16
+                                  : 16,
+                              fontWeight: tabController.selectedIndex.value == 3
+                                  ? FontWeight.w600
+                                  : FontWeight.normal,
+                              color: tabController.selectedIndex.value == 3
+                                  ? mainColor
+                                  : const Color.fromARGB(255, 50, 50, 50),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 50),
+                    ],
+                  ),
+                ],
               ),
-              centerTitle: false,
-              actions: [
-                Obx(
-                  () => TextButton(
-                    onPressed: () {
-                      tabController.selectedIndex.value = 0;
-                    },
-                    child: Text(
-                      'Home',
-                      style: TextStyle(
-                        fontSize:
-                            tabController.selectedIndex.value == 0 ? 18 : 16,
-                        fontWeight: tabController.selectedIndex.value == 0
-                            ? FontWeight.w600
-                            : FontWeight.normal,
-                        color: tabController.selectedIndex.value == 0
-                            ? mainColor
-                            : textColor,
-                      ),
-                    ),
-                  ),
-                ),
-                Obx(
-                  () => TextButton(
-                    onPressed: () {
-                      tabController.selectedIndex.value = 1;
-                    },
-                    child: Text(
-                      'Products & Services',
-                      style: TextStyle(
-                        fontSize:
-                            tabController.selectedIndex.value == 1 ? 18 : 16,
-                        fontWeight: tabController.selectedIndex.value == 1
-                            ? FontWeight.w600
-                            : FontWeight.normal,
-                        color: tabController.selectedIndex.value == 1
-                            ? mainColor
-                            : textColor,
-                      ),
-                    ),
-                  ),
-                ),
-                Obx(
-                  () => TextButton(
-                    onPressed: () {
-                      tabController.selectedIndex.value = 2;
-                    },
-                    child: Text(
-                      'Facilities',
-                      style: TextStyle(
-                        fontSize:
-                            tabController.selectedIndex.value == 2 ? 18 : 16,
-                        fontWeight: tabController.selectedIndex.value == 2
-                            ? FontWeight.w600
-                            : FontWeight.normal,
-                        color: tabController.selectedIndex.value == 2
-                            ? mainColor
-                            : textColor,
-                      ),
-                    ),
-                  ),
-                ),
-                Obx(
-                  () => TextButton(
-                    onPressed: () {
-                      tabController.selectedIndex.value = 3;
-                    },
-                    child: Text(
-                      'About',
-                      style: TextStyle(
-                        fontSize:
-                            tabController.selectedIndex.value == 3 ? 18 : 16,
-                        fontWeight: tabController.selectedIndex.value == 3
-                            ? FontWeight.w600
-                            : FontWeight.normal,
-                        color: tabController.selectedIndex.value == 3
-                            ? mainColor
-                            : textColor,
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 50),
-              ],
-              backgroundColor: Colors.white.withOpacity(0.3),
+              backgroundColor: Colors.white.withOpacity(0.6),
             ),
           ),
         ),

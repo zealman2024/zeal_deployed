@@ -43,14 +43,18 @@ class _ProductsCardState extends State<ProductsCard> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AnimatedContainer(
-            duration: const Duration(microseconds: 400),
+            curve: Curves.elasticInOut,
+            duration: const Duration(microseconds: 600),
             height: widget.isMobile
-                ? isHover
-                    ? 165
-                    : 150
+                ? 150
                 : isHover
                     ? 370
                     : 350,
+            width: widget.isMobile
+                ? 150
+                : isHover
+                    ? 340
+                    : 320,
             decoration: BoxDecoration(
               color: serviceSectionColor,
               borderRadius: BorderRadius.circular(20),
@@ -61,14 +65,17 @@ class _ProductsCardState extends State<ProductsCard> {
             ),
           ),
           SizedBox(
-            height: widget.isMobile ? 6 : 16,
+            height: widget.isMobile ? 9 : 16,
           ),
-          Text(
-            widget.text,
-            style: TextStyle(
-              fontSize: widget.isMobile ? 16 : 20,
-              color: textColor,
-              fontWeight: FontWeight.w400,
+          SizedBox(
+            width: widget.isMobile ? 155 : 320,
+            child: Text(
+              widget.text,
+              style: TextStyle(
+                fontSize: widget.isMobile ? 16 : 20,
+                color: textColor,
+                fontWeight: FontWeight.w400,
+              ),
             ),
           ),
         ],

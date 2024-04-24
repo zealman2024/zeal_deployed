@@ -2,11 +2,14 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:zeal_new/controllers/tab_controller.dart';
 import 'package:zeal_new/global/pallet.dart';
+import 'package:zeal_new/responsive/mobile_screen_layout.dart';
 import 'package:zeal_new/responsive/screens/mobile_screens/mobile_menue.dart';
+import 'package:zeal_new/widget/menue_button.dart';
 import 'package:zeal_new/widget/mobile_footer.dart';
 import 'package:zeal_new/widget/product_card.dart';
 
@@ -17,6 +20,7 @@ class MobileProductsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: MobileMenueScreen(),
       extendBodyBehindAppBar: true,
       appBar: PreferredSize(
         preferredSize: const Size(
@@ -29,7 +33,11 @@ class MobileProductsPage extends StatelessWidget {
             child: AppBar(
               title: InkWell(
                 onTap: () {
-                  Navigator.of(context).popUntil((route) => route.isFirst);
+                  Navigator.of(context).pushAndRemoveUntil(
+                      MaterialPageRoute(
+                        builder: (context) => const MobileScreenLayout(),
+                      ),
+                      (route) => false);
                 },
                 child: Image.asset(
                   "assets/images/logo.png",
@@ -37,21 +45,9 @@ class MobileProductsPage extends StatelessWidget {
                 ),
               ),
               centerTitle: true,
-              actions: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const MobileMenueScreen(),
-                      ),
-                    );
-                  },
-                  icon: SvgPicture.asset(
-                    "assets/images/menu.svg",
-                    height: 20,
-                  ),
-                ),
-                const SizedBox(width: 10),
+              actions: const [
+                MenueButton(),
+                SizedBox(width: 10),
               ],
               backgroundColor: Colors.white.withOpacity(0.3),
             ),
@@ -93,50 +89,57 @@ class MobileProductsPage extends StatelessWidget {
                             ],
                           ),
                         ),
+                        SizedBox(
+                            height:
+                                tabController.isDefenceActive.value ? 26 : 16),
                         tabController.isDefenceActive.value
-                            ? GridView.count(
-                                physics: const NeverScrollableScrollPhysics(),
-                                padding: const EdgeInsets.only(top: 16),
-                                childAspectRatio: 1 / 1.2,
-                                crossAxisCount: 2,
-                                shrinkWrap: true,
-                                crossAxisSpacing: 6,
-                                children: const [
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/defence/re.jpeg",
-                                      text: "RUGGED ENCLOSURES"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/defence/scr.jpeg",
-                                      text: "SERVER & CONTROL RACKS"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/defence/htpp.jpeg",
-                                      text: "HYDRAULIC TANKS AND POWER PACKS"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/defence/mtp.jpeg",
-                                      text: "MACHINED AND TURNED PARTS"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/defence/ep.jpeg",
-                                      text: "ELECTRIC PANEL (INDOOR/OUTDOOR)"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/defence/ma.jpeg",
-                                      text: "MECHANICAL ASSEMBLY"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/defence/psmc.jpeg",
-                                      text: "PRECISION SHEET METAL COMPONENT"),
+                            ? const Column(
+                                children: [
+                                  Wrap(
+                                    spacing: 16,
+                                    runSpacing: 16,
+                                    children: [
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/defence/re.jpeg",
+                                          text: "RUGGED ENCLOSURES"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/defence/scr.jpeg",
+                                          text: "SERVER & CONTROL RACKS"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/defence/htpp.jpeg",
+                                          text:
+                                              "HYDRAULIC TANKS AND POWER PACKS"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/defence/mtp.jpeg",
+                                          text: "MACHINED AND TURNED PARTS"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/defence/ep.jpeg",
+                                          text:
+                                              "ELECTRIC PANEL (INDOOR/OUTDOOR)"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/defence/ma.jpeg",
+                                          text: "MECHANICAL ASSEMBLY"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/defence/psmc.jpeg",
+                                          text:
+                                              "PRECISION SHEET METAL COMPONENT"),
+                                    ],
+                                  ),
+                                  SizedBox(height: 20),
                                 ],
                               )
                             : const SizedBox(),
@@ -168,61 +171,64 @@ class MobileProductsPage extends StatelessWidget {
                             ],
                           ),
                         ),
+                        SizedBox(
+                            height: tabController.isFoodActive.value ? 26 : 16),
                         tabController.isFoodActive.value
-                            ? GridView.count(
-                                physics: const NeverScrollableScrollPhysics(),
-                                padding: const EdgeInsets.only(top: 16),
-                                childAspectRatio: 1 / 1.2,
-                                crossAxisCount: 2,
-                                shrinkWrap: true,
-                                crossAxisSpacing: 6,
-                                children: const [
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Food Processing Industry/hdt.jpg",
-                                      text: "HEAVY DUTY TROLLEYS"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Food Processing Industry/lt.jpg",
-                                      text: "LINE TROLLEYS"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Food Processing Industry/t.jpeg",
-                                      text: "TROLLEY"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Food Processing Industry/sr.jpg",
-                                      text: "STORAGE RACK"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Food Processing Industry/sc.jpg",
-                                      text: "STORAGE CABINETS"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Food Processing Industry/fpt.jpg",
-                                      text: "FOOD PROCESSING TABLES"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Food Processing Industry/wp.jpg",
-                                      text:
-                                          "WATER PURIFIER AND HAND WASH UNITS"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Food Processing Industry/dt.jpg",
-                                      text: "DINING TABLES"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Food Processing Industry/MISCEL.jpg",
-                                      text: "MISCELLANEOUS"),
+                            ? const Column(
+                                children: [
+                                  Wrap(
+                                    spacing: 16,
+                                    runSpacing: 16,
+                                    children: [
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/hdt.jpg",
+                                          text: "HEAVY DUTY TROLLEYS"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/lt.jpg",
+                                          text: "LINE TROLLEYS"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/t.jpeg",
+                                          text: "TROLLEY"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/sr.jpg",
+                                          text: "STORAGE RACK"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/sc.jpg",
+                                          text: "STORAGE CABINETS"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/fpt.jpg",
+                                          text: "FOOD PROCESSING TABLES"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/wp.jpg",
+                                          text:
+                                              "WATER PURIFIER AND HAND WASH UNITS"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/dt.jpg",
+                                          text: "DINING TABLES"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/MISCEL.jpg",
+                                          text: "MISCELLANEOUS"),
+                                    ],
+                                  ),
+                                  SizedBox(height: 20),
                                 ],
                               )
                             : const SizedBox(),
@@ -254,72 +260,79 @@ class MobileProductsPage extends StatelessWidget {
                             ],
                           ),
                         ),
+                        SizedBox(
+                            height:
+                                tabController.isArchiActive.value ? 26 : 16),
                         tabController.isArchiActive.value
-                            ? GridView.count(
-                                physics: const NeverScrollableScrollPhysics(),
-                                padding: const EdgeInsets.only(top: 16),
-                                childAspectRatio: 1 / 1.2,
-                                crossAxisCount: 2,
-                                shrinkWrap: true,
-                                crossAxisSpacing: 6,
-                                children: const [
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Architecture/sskl.png",
-                                      text: "STAINLESS STEEL KITCHES / LABS"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Architecture/dp.jpeg",
-                                      text: "DECORATIVE PANELS"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Architecture/wf.jpg",
-                                      text: "WALL FRAMES"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Architecture/aol.jpeg",
-                                      text: "AESTHETICS & OUTDOOR LAMPS"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Architecture/wm.png",
-                                      text: "WALL MOUNT"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Architecture/cs.jpeg",
-                                      text: "CLADINGS & SKIRTINGS"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Architecture/mscr.jpeg",
-                                      text: "METALIC STAIR CASE & RAILINGS"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Architecture/rcop.jpeg",
-                                      text: "ROOFS, CANOPIES & OUTDOOR PATIOS"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Architecture/chairs.jpeg",
-                                      text: "CHAIRS"),
-                                  ProductsCard(
-                                      isMobile: true,
-                                      imagePath:
-                                          "assets/images/products_single/Architecture/tables.jpeg",
-                                      text: "TABLES"),
+                            ? const Column(
+                                children: [
+                                  Wrap(
+                                    spacing: 16,
+                                    runSpacing: 16,
+                                    children: [
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/sskl.png",
+                                          text:
+                                              "STAINLESS STEEL KITCHES / LABS"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/dp.jpeg",
+                                          text: "DECORATIVE PANELS"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/wf.jpg",
+                                          text: "WALL FRAMES"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/aol.jpeg",
+                                          text: "AESTHETICS & OUTDOOR LAMPS"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/wm.png",
+                                          text: "WALL MOUNT"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/cs.jpeg",
+                                          text: "CLADINGS & SKIRTINGS"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/mscr.jpeg",
+                                          text:
+                                              "METALIC STAIR CASE & RAILINGS"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/rcop.jpeg",
+                                          text:
+                                              "ROOFS, CANOPIES & OUTDOOR PATIOS"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/chairs.jpeg",
+                                          text: "CHAIRS"),
+                                      ProductsCard(
+                                          isMobile: true,
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/tables.jpeg",
+                                          text: "TABLES"),
+                                    ],
+                                  ),
+                                  SizedBox(height: 20),
                                 ],
                               )
                             : const SizedBox(),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 20),
                   const Text(
                     "General Products",
                     style: TextStyle(
@@ -328,39 +341,41 @@ class MobileProductsPage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  GridView.count(
-                    padding: const EdgeInsets.only(top: 16),
-                    childAspectRatio: 1 / 1.2,
-                    physics: const NeverScrollableScrollPhysics(),
-                    crossAxisCount: 2,
-                    shrinkWrap: true,
-                    crossAxisSpacing: 6,
-                    children: const [
-                      ProductsCard(
-                          isMobile: true,
-                          imagePath:
-                              "assets/images/products_single/general/ec.jpg",
-                          text: "Electrical / Electronic Cabinets"),
-                      ProductsCard(
-                          isMobile: true,
-                          imagePath:
-                              "assets/images/products_single/general/ups.jpg",
-                          text: "UPS Enclosures"),
-                      ProductsCard(
-                          isMobile: true,
-                          imagePath:
-                              "assets/images/products_single/general/ma.jpeg",
-                          text: "Mechanical Assemblies"),
-                      ProductsCard(
-                          isMobile: true,
-                          imagePath:
-                              "assets/images/products_single/general/sscp.jpeg",
-                          text: "SS Cabinets/ Products"),
-                      ProductsCard(
-                          isMobile: true,
-                          imagePath:
-                              "assets/images/products_single/general/aa.jpeg",
-                          text: "Aluminium Assemblies"),
+                  const SizedBox(height: 26),
+                  const Column(
+                    children: [
+                      Wrap(
+                        spacing: 16,
+                        runSpacing: 16,
+                        children: [
+                          ProductsCard(
+                              isMobile: true,
+                              imagePath:
+                                  "assets/images/products_single/general/ec.jpg",
+                              text: "Electrical / Electronic Cabinets"),
+                          ProductsCard(
+                              isMobile: true,
+                              imagePath:
+                                  "assets/images/products_single/general/ups.jpg",
+                              text: "UPS Enclosures"),
+                          ProductsCard(
+                              isMobile: true,
+                              imagePath:
+                                  "assets/images/products_single/general/ma.jpeg",
+                              text: "Mechanical Assemblies"),
+                          ProductsCard(
+                              isMobile: true,
+                              imagePath:
+                                  "assets/images/products_single/general/sscp.jpeg",
+                              text: "SS Cabinets/ Products"),
+                          ProductsCard(
+                              isMobile: true,
+                              imagePath:
+                                  "assets/images/products_single/general/aa.jpeg",
+                              text: "Aluminium Assemblies"),
+                        ],
+                      ),
+                      SizedBox(height: 20),
                     ],
                   )
                 ],

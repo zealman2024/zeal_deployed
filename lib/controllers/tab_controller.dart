@@ -1,6 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+
 
 class CustomTabController extends GetxController {
   final urlImages = [
@@ -27,5 +29,17 @@ class CustomTabController extends GetxController {
     } catch (e) {
       await Clipboard.setData(ClipboardData(text: targetEmail));
     }
+  }
+
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
+
+  void openEndDrawer(BuildContext context) {
+    
+    scaffoldKey.currentState!.openEndDrawer();
+  }
+
+  void closeEndDrawer(BuildContext context) {
+    Navigator.of(context).pop();
   }
 }

@@ -8,6 +8,7 @@ import 'package:zeal_new/responsive/screens/mobile_screens/mobile_menue.dart';
 import 'package:get/get.dart';
 import 'package:zeal_new/widget/about_container.dart';
 import 'package:zeal_new/widget/hero_slider.dart';
+import 'package:zeal_new/widget/menue_button.dart';
 import 'package:zeal_new/widget/mobile_footer.dart';
 import 'package:zeal_new/widget/product_card.dart';
 
@@ -24,6 +25,7 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: MobileMenueScreen(),
       extendBodyBehindAppBar: true,
       appBar: PreferredSize(
         preferredSize: const Size(
@@ -35,30 +37,16 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
             filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
             child: AppBar(
               title: InkWell(
-                onTap: () {
-                  Navigator.of(context).popUntil((route) => route.isFirst);
-                },
+                onTap: () {},
                 child: Image.asset(
                   "assets/images/logo.png",
                   height: 28,
                 ),
               ),
               centerTitle: true,
-              actions: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const MobileMenueScreen(),
-                      ),
-                    );
-                  },
-                  icon: SvgPicture.asset(
-                    "assets/images/menu.svg",
-                    height: 20,
-                  ),
-                ),
-                const SizedBox(width: 10),
+              actions: const [
+                MenueButton(),
+                SizedBox(width: 10),
               ],
               backgroundColor: Colors.white.withOpacity(0.3),
             ),
@@ -129,56 +117,66 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
                   ),
                   const SizedBox(height: 32),
                   const Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "Areas of Service",
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: textColor,
-                          fontWeight: FontWeight.w700,
+                      SizedBox(
+                        child: Text(
+                          "Areas of Service",
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: textColor,
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
                       ),
-                      SizedBox(height: 26),
-                      ProductsCard(
-                          isMobile: true,
-                          imagePath: "assets/images/services/defence.png",
-                          text: "Defense Sector"),
-                      SizedBox(
-                        height: 20,
+                      SizedBox(height: 21),
+                      Wrap(
+                        spacing: 16,
+                        runSpacing: 16,
+                        children: [
+                          ProductsCard(
+                              isMobile: true,
+                              imagePath: "assets/images/services/defence.png",
+                              text: "Defense Sector"),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          ProductsCard(
+                              isMobile: true,
+                              imagePath: "assets/images/services/hydrolics.png",
+                              text: "Industrial Hydraulics"),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          ProductsCard(
+                              isMobile: true,
+                              imagePath: "assets/images/services/medical.png",
+                              text: "Medical Electronics"),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          ProductsCard(
+                              isMobile: true,
+                              imagePath: "assets/images/services/airports.png",
+                              text: "Infrastructure-Airports"),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          ProductsCard(
+                              isMobile: true,
+                              imagePath: "assets/images/services/food.png",
+                              text: "Food Industry"),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          ProductsCard(
+                              isMobile: true,
+                              imagePath:
+                                  "assets/images/services/architecture.png",
+                              text: "Architecture"),
+                        ],
                       ),
-                      ProductsCard(
-                          isMobile: true,
-                          imagePath: "assets/images/services/hydrolics.png",
-                          text: "Industrial Hydraulics"),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      ProductsCard(
-                          isMobile: true,
-                          imagePath: "assets/images/services/medical.png",
-                          text: "Medical Electronics"),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      ProductsCard(
-                          isMobile: true,
-                          imagePath: "assets/images/services/airports.png",
-                          text: "Infrastructure-Airports"),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      ProductsCard(
-                          isMobile: true,
-                          imagePath: "assets/images/services/food.png",
-                          text: "Food Industry"),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      ProductsCard(
-                          isMobile: true,
-                          imagePath: "assets/images/services/architecture.png",
-                          text: "Architecture"),
                       SizedBox(
                         height: 20,
                       ),

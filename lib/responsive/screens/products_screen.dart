@@ -54,269 +54,53 @@ class _ProductsScreenState extends State<ProductsScreen> {
                           ),
                         ),
                         tabController.isDefenceActive.value
-                            ? LayoutBuilder(
-                                builder: (BuildContext context,
-                                    BoxConstraints constraints) {
-                                  if (constraints.maxWidth > 1300) {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 3 / 6,
-                                      crossAxisCount: 6,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/re.jpeg",
-                                            text: "RUGGED ENCLOSURES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/scr.jpeg",
-                                            text: "SERVER & CONTROL RACKS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/htpp.jpeg",
-                                            text:
-                                                "HYDRAULIC TANKS AND POWER PACKS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/mtp.jpeg",
-                                            text: "MACHINED AND TURNED PARTS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/ep.jpeg",
-                                            text:
-                                                "ELECTRIC PANEL (INDOOR/OUTDOOR)"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/ma.jpeg",
-                                            text: "MECHANICAL ASSEMBLY"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/psmc.jpeg",
-                                            text:
-                                                "PRECISION SHEET METAL COMPONENT"),
-                                      ],
-                                    );
-                                  } else if (constraints.maxWidth > 1000) {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 3 / 9,
-                                      crossAxisCount: 6,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/re.jpeg",
-                                            text: "RUGGED ENCLOSURES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/scr.jpeg",
-                                            text: "SERVER & CONTROL RACKS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/htpp.jpeg",
-                                            text:
-                                                "HYDRAULIC TANKS AND POWER PACKS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/mtp.jpeg",
-                                            text: "MACHINED AND TURNED PARTS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/ep.jpeg",
-                                            text:
-                                                "ELECTRIC PANEL (INDOOR/OUTDOOR)"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/ma.jpeg",
-                                            text: "MECHANICAL ASSEMBLY"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/psmc.jpeg",
-                                            text:
-                                                "PRECISION SHEET METAL COMPONENT"),
-                                      ],
-                                    );
-                                  } else if (constraints.maxWidth > 950) {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 2 / 4,
-                                      crossAxisCount: 4,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/re.jpeg",
-                                            text: "RUGGED ENCLOSURES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/scr.jpeg",
-                                            text: "SERVER & CONTROL RACKS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/htpp.jpeg",
-                                            text:
-                                                "HYDRAULIC TANKS AND POWER PACKS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/mtp.jpeg",
-                                            text: "MACHINED AND TURNED PARTS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/ep.jpeg",
-                                            text:
-                                                "ELECTRIC PANEL (INDOOR/OUTDOOR)"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/ma.jpeg",
-                                            text: "MECHANICAL ASSEMBLY"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/psmc.jpeg",
-                                            text:
-                                                "PRECISION SHEET METAL COMPONENT"),
-                                      ],
-                                    );
-                                  } else if (constraints.maxWidth > 850) {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 3 / 9,
-                                      crossAxisCount: 4,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/re.jpeg",
-                                            text: "RUGGED ENCLOSURES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/scr.jpeg",
-                                            text: "SERVER & CONTROL RACKS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/htpp.jpeg",
-                                            text:
-                                                "HYDRAULIC TANKS AND POWER PACKS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/mtp.jpeg",
-                                            text: "MACHINED AND TURNED PARTS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/ep.jpeg",
-                                            text:
-                                                "ELECTRIC PANEL (INDOOR/OUTDOOR)"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/ma.jpeg",
-                                            text: "MECHANICAL ASSEMBLY"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/psmc.jpeg",
-                                            text:
-                                                "PRECISION SHEET METAL COMPONENT"),
-                                      ],
-                                    );
-                                  } else if (constraints.maxWidth < 600) {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 3 / 4,
-                                      crossAxisCount: 3,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/re.jpeg",
-                                            text: "RUGGED ENCLOSURES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/scr.jpeg",
-                                            text: "SERVER & CONTROL RACKS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/htpp.jpeg",
-                                            text:
-                                                "HYDRAULIC TANKS AND POWER PACKS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/mtp.jpeg",
-                                            text: "MACHINED AND TURNED PARTS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/ep.jpeg",
-                                            text:
-                                                "ELECTRIC PANEL (INDOOR/OUTDOOR)"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/ma.jpeg",
-                                            text: "MECHANICAL ASSEMBLY"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/psmc.jpeg",
-                                            text:
-                                                "PRECISION SHEET METAL COMPONENT"),
-                                      ],
-                                    );
-                                  } else {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 3 / 4,
-                                      crossAxisCount: 3,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/re.jpeg",
-                                            text: "RUGGED ENCLOSURES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/scr.jpeg",
-                                            text: "SERVER & CONTROL RACKS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/htpp.jpeg",
-                                            text:
-                                                "HYDRAULIC TANKS AND POWER PACKS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/mtp.jpeg",
-                                            text: "MACHINED AND TURNED PARTS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/ep.jpeg",
-                                            text:
-                                                "ELECTRIC PANEL (INDOOR/OUTDOOR)"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/ma.jpeg",
-                                            text: "MECHANICAL ASSEMBLY"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/defence/psmc.jpeg",
-                                            text:
-                                                "PRECISION SHEET METAL COMPONENT"),
-                                      ],
-                                    );
-                                  }
-                                },
+                            ? const SizedBox(height: 36)
+                            : const SizedBox(height: 16),
+                        tabController.isDefenceActive.value
+                            ? const Column(
+                                children: [
+                                  Wrap(
+                                    spacing: 16,
+                                    runSpacing: 36,
+                                    alignment: WrapAlignment.start,
+                                    crossAxisAlignment:
+                                        WrapCrossAlignment.start,
+                                    children: [
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/defence/re.jpeg",
+                                          text: "RUGGED ENCLOSURES"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/defence/scr.jpeg",
+                                          text: "SERVER & CONTROL RACKS"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/defence/htpp.jpeg",
+                                          text:
+                                              "HYDRAULIC TANKS AND POWER PACKS"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/defence/mtp.jpeg",
+                                          text: "MACHINED AND TURNED PARTS"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/defence/ep.jpeg",
+                                          text:
+                                              "ELECTRIC PANEL (INDOOR/OUTDOOR)"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/defence/ma.jpeg",
+                                          text: "MECHANICAL ASSEMBLY"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/defence/psmc.jpeg",
+                                          text:
+                                              "PRECISION SHEET METAL COMPONENT"),
+                                    ],
+                                  ),
+                                  SizedBox(height: 52),
+                                ],
                               )
                             : const SizedBox(),
                       ],
@@ -348,305 +132,59 @@ class _ProductsScreenState extends State<ProductsScreen> {
                           ),
                         ),
                         tabController.isFoodActive.value
-                            ? LayoutBuilder(
-                                builder: (BuildContext context,
-                                    BoxConstraints constraints) {
-                                  if (constraints.maxWidth > 1300) {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 3 / 6,
-                                      crossAxisCount: 6,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/hdt.jpg",
-                                            text: "HEAVY DUTY TROLLEYS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/lt.jpg",
-                                            text: "LINE TROLLEYS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/t.jpeg",
-                                            text: "TROLLEY"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/sr.jpg",
-                                            text: "STORAGE RACK"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/sc.jpg",
-                                            text: "STORAGE CABINETS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/fpt.jpg",
-                                            text: "FOOD PROCESSING TABLES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/wp.jpg",
-                                            text:
-                                                "WATER PURIFIER AND HAND WASH UNITS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/dt.jpg",
-                                            text: "DINING TABLES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/MISCEL.jpg",
-                                            text: "MISCELLANEOUS"),
-                                      ],
-                                    );
-                                  } else if (constraints.maxWidth > 1000) {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 3 / 9,
-                                      crossAxisCount: 6,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/hdt.jpg",
-                                            text: "HEAVY DUTY TROLLEYS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/lt.jpg",
-                                            text: "LINE TROLLEYS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/t.jpeg",
-                                            text: "TROLLEY"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/sr.jpg",
-                                            text: "STORAGE RACK"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/sc.jpg",
-                                            text: "STORAGE CABINETS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/fpt.jpg",
-                                            text: "FOOD PROCESSING TABLES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/wp.jpg",
-                                            text:
-                                                "WATER PURIFIER AND HAND WASH UNITS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/dt.jpg",
-                                            text: "DINING TABLES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/MISCEL.jpg",
-                                            text: "MISCELLANEOUS"),
-                                      ],
-                                    );
-                                  } else if (constraints.maxWidth > 950) {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 2 / 4,
-                                      crossAxisCount: 4,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/hdt.jpg",
-                                            text: "HEAVY DUTY TROLLEYS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/lt.jpg",
-                                            text: "LINE TROLLEYS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/t.jpeg",
-                                            text: "TROLLEY"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/sr.jpg",
-                                            text: "STORAGE RACK"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/sc.jpg",
-                                            text: "STORAGE CABINETS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/fpt.jpg",
-                                            text: "FOOD PROCESSING TABLES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/wp.jpg",
-                                            text:
-                                                "WATER PURIFIER AND HAND WASH UNITS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/dt.jpg",
-                                            text: "DINING TABLES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/MISCEL.jpg",
-                                            text: "MISCELLANEOUS"),
-                                      ],
-                                    );
-                                  } else if (constraints.maxWidth > 850) {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 3 / 9,
-                                      crossAxisCount: 4,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/hdt.jpg",
-                                            text: "HEAVY DUTY TROLLEYS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/lt.jpg",
-                                            text: "LINE TROLLEYS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/t.jpeg",
-                                            text: "TROLLEY"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/sr.jpg",
-                                            text: "STORAGE RACK"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/sc.jpg",
-                                            text: "STORAGE CABINETS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/fpt.jpg",
-                                            text: "FOOD PROCESSING TABLES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/wp.jpg",
-                                            text:
-                                                "WATER PURIFIER AND HAND WASH UNITS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/dt.jpg",
-                                            text: "DINING TABLES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/MISCEL.jpg",
-                                            text: "MISCELLANEOUS"),
-                                      ],
-                                    );
-                                  } else if (constraints.maxWidth < 600) {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 3 / 4,
-                                      crossAxisCount: 3,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/hdt.jpg",
-                                            text: "HEAVY DUTY TROLLEYS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/lt.jpg",
-                                            text: "LINE TROLLEYS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/t.jpeg",
-                                            text: "TROLLEY"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/sr.jpg",
-                                            text: "STORAGE RACK"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/sc.jpg",
-                                            text: "STORAGE CABINETS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/fpt.jpg",
-                                            text: "FOOD PROCESSING TABLES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/wp.jpg",
-                                            text:
-                                                "WATER PURIFIER AND HAND WASH UNITS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/dt.jpg",
-                                            text: "DINING TABLES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/MISCEL.jpg",
-                                            text: "MISCELLANEOUS"),
-                                      ],
-                                    );
-                                  } else {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 3 / 4,
-                                      crossAxisCount: 3,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/hdt.jpg",
-                                            text: "HEAVY DUTY TROLLEYS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/lt.jpg",
-                                            text: "LINE TROLLEYS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/t.jpeg",
-                                            text: "TROLLEY"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/sr.jpg",
-                                            text: "STORAGE RACK"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/sc.jpg",
-                                            text: "STORAGE CABINETS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/fpt.jpg",
-                                            text: "FOOD PROCESSING TABLES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/wp.jpg",
-                                            text:
-                                                "WATER PURIFIER AND HAND WASH UNITS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/dt.jpg",
-                                            text: "DINING TABLES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Food Processing Industry/MISCEL.jpg",
-                                            text: "MISCELLANEOUS"),
-                                      ],
-                                    );
-                                  }
-                                },
+                            ? const SizedBox(height: 36)
+                            : const SizedBox(height: 16),
+                        tabController.isFoodActive.value
+                            ? const Column(
+                                children: [
+                                  Wrap(
+                                    spacing: 16,
+                                    runSpacing: 36,
+                                    alignment: WrapAlignment.start,
+                                    crossAxisAlignment:
+                                        WrapCrossAlignment.start,
+                                    children: [
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/hdt.jpg",
+                                          text: "HEAVY DUTY TROLLEYS"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/lt.jpg",
+                                          text: "LINE TROLLEYS"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/t.jpeg",
+                                          text: "TROLLEY"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/sr.jpg",
+                                          text: "STORAGE RACK"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/sc.jpg",
+                                          text: "STORAGE CABINETS"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/fpt.jpg",
+                                          text: "FOOD PROCESSING TABLES"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/wp.jpg",
+                                          text:
+                                              "WATER PURIFIER AND HAND WASH UNITS"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/dt.jpg",
+                                          text: "DINING TABLES"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Food Processing Industry/MISCEL.jpg",
+                                          text: "MISCELLANEOUS"),
+                                    ],
+                                  ),
+                                  SizedBox(height: 52),
+                                ],
                               )
                             : const SizedBox(),
                       ],
@@ -678,548 +216,114 @@ class _ProductsScreenState extends State<ProductsScreen> {
                           ),
                         ),
                         tabController.isArchiActive.value
-                            ? LayoutBuilder(
-                                builder: (BuildContext context,
-                                    BoxConstraints constraints) {
-                                  if (constraints.maxWidth > 1300) {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 3 / 6,
-                                      crossAxisCount: 6,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/sskl.png",
-                                            text:
-                                                "STAINLESS STEEL KITCHES / LABS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/dp.jpeg",
-                                            text: "DECORATIVE PANELS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/wf.jpg",
-                                            text: "WALL FRAMES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/aol.jpeg",
-                                            text: "AESTHETICS & OUTDOOR LAMPS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/wm.png",
-                                            text: "WALL MOUNT"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/cs.jpeg",
-                                            text: "CLADINGS & SKIRTINGS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/mscr.jpeg",
-                                            text:
-                                                "METALIC STAIR CASE & RAILINGS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/rcop.jpeg",
-                                            text:
-                                                "ROOFS, CANOPIES & OUTDOOR PATIOS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/chairs.jpeg",
-                                            text: "CHAIRS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/tables.jpeg",
-                                            text: "TABLES"),
-                                      ],
-                                    );
-                                  } else if (constraints.maxWidth > 1000) {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 3 / 9,
-                                      crossAxisCount: 6,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/sskl.png",
-                                            text:
-                                                "STAINLESS STEEL KITCHES / LABS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/dp.jpeg",
-                                            text: "DECORATIVE PANELS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/wf.jpg",
-                                            text: "WALL FRAMES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/aol.jpeg",
-                                            text: "AESTHETICS & OUTDOOR LAMPS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/wm.png",
-                                            text: "WALL MOUNT"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/cs.jpeg",
-                                            text: "CLADINGS & SKIRTINGS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/mscr.jpeg",
-                                            text:
-                                                "METALIC STAIR CASE & RAILINGS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/rcop.jpeg",
-                                            text:
-                                                "ROOFS, CANOPIES & OUTDOOR PATIOS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/chairs.jpeg",
-                                            text: "CHAIRS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/tables.jpeg",
-                                            text: "TABLES"),
-                                      ],
-                                    );
-                                  } else if (constraints.maxWidth > 950) {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 2 / 4,
-                                      crossAxisCount: 4,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/sskl.png",
-                                            text:
-                                                "STAINLESS STEEL KITCHES / LABS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/dp.jpeg",
-                                            text: "DECORATIVE PANELS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/wf.jpg",
-                                            text: "WALL FRAMES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/aol.jpeg",
-                                            text: "AESTHETICS & OUTDOOR LAMPS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/wm.png",
-                                            text: "WALL MOUNT"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/cs.jpeg",
-                                            text: "CLADINGS & SKIRTINGS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/mscr.jpeg",
-                                            text:
-                                                "METALIC STAIR CASE & RAILINGS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/rcop.jpeg",
-                                            text:
-                                                "ROOFS, CANOPIES & OUTDOOR PATIOS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/chairs.jpeg",
-                                            text: "CHAIRS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/tables.jpeg",
-                                            text: "TABLES"),
-                                      ],
-                                    );
-                                  } else if (constraints.maxWidth > 850) {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 3 / 9,
-                                      crossAxisCount: 4,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/sskl.png",
-                                            text:
-                                                "STAINLESS STEEL KITCHES / LABS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/dp.jpeg",
-                                            text: "DECORATIVE PANELS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/wf.jpg",
-                                            text: "WALL FRAMES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/aol.jpeg",
-                                            text: "AESTHETICS & OUTDOOR LAMPS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/wm.png",
-                                            text: "WALL MOUNT"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/cs.jpeg",
-                                            text: "CLADINGS & SKIRTINGS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/mscr.jpeg",
-                                            text:
-                                                "METALIC STAIR CASE & RAILINGS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/rcop.jpeg",
-                                            text:
-                                                "ROOFS, CANOPIES & OUTDOOR PATIOS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/chairs.jpeg",
-                                            text: "CHAIRS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/tables.jpeg",
-                                            text: "TABLES"),
-                                      ],
-                                    );
-                                  } else if (constraints.maxWidth < 600) {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 3 / 4,
-                                      crossAxisCount: 3,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/sskl.png",
-                                            text:
-                                                "STAINLESS STEEL KITCHES / LABS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/dp.jpeg",
-                                            text: "DECORATIVE PANELS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/wf.jpg",
-                                            text: "WALL FRAMES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/aol.jpeg",
-                                            text: "AESTHETICS & OUTDOOR LAMPS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/wm.png",
-                                            text: "WALL MOUNT"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/cs.jpeg",
-                                            text: "CLADINGS & SKIRTINGS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/mscr.jpeg",
-                                            text:
-                                                "METALIC STAIR CASE & RAILINGS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/rcop.jpeg",
-                                            text:
-                                                "ROOFS, CANOPIES & OUTDOOR PATIOS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/chairs.jpeg",
-                                            text: "CHAIRS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/tables.jpeg",
-                                            text: "TABLES"),
-                                      ],
-                                    );
-                                  } else {
-                                    return GridView.count(
-                                      padding: const EdgeInsets.only(top: 26),
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      childAspectRatio: 3 / 4,
-                                      crossAxisCount: 3,
-                                      shrinkWrap: true,
-                                      crossAxisSpacing: 16,
-                                      children: const [
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/sskl.png",
-                                            text:
-                                                "STAINLESS STEEL KITCHES / LABS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/dp.jpeg",
-                                            text: "DECORATIVE PANELS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/wf.jpg",
-                                            text: "WALL FRAMES"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/aol.jpeg",
-                                            text: "AESTHETICS & OUTDOOR LAMPS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/wm.png",
-                                            text: "WALL MOUNT"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/cs.jpeg",
-                                            text: "CLADINGS & SKIRTINGS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/mscr.jpeg",
-                                            text:
-                                                "METALIC STAIR CASE & RAILINGS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/rcop.jpeg",
-                                            text:
-                                                "ROOFS, CANOPIES & OUTDOOR PATIOS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/chairs.jpeg",
-                                            text: "CHAIRS"),
-                                        ProductsCard(
-                                            imagePath:
-                                                "assets/images/products_single/Architecture/tables.jpeg",
-                                            text: "TABLES"),
-                                      ],
-                                    );
-                                  }
-                                },
+                            ? const SizedBox(height: 36)
+                            : const SizedBox(height: 16),
+                        tabController.isArchiActive.value
+                            ? const Column(
+                                children: [
+                                  Wrap(
+                                    spacing: 16,
+                                    runSpacing: 36,
+                                    alignment: WrapAlignment.start,
+                                    crossAxisAlignment:
+                                        WrapCrossAlignment.start,
+                                    children: [
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/sskl.png",
+                                          text:
+                                              "STAINLESS STEEL KITCHES / LABS"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/dp.jpeg",
+                                          text: "DECORATIVE PANELS"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/wf.jpg",
+                                          text: "WALL FRAMES"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/aol.jpeg",
+                                          text: "AESTHETICS & OUTDOOR LAMPS"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/wm.png",
+                                          text: "WALL MOUNT"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/cs.jpeg",
+                                          text: "CLADINGS & SKIRTINGS"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/mscr.jpeg",
+                                          text:
+                                              "METALIC STAIR CASE & RAILINGS"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/rcop.jpeg",
+                                          text:
+                                              "ROOFS, CANOPIES & OUTDOOR PATIOS"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/chairs.jpeg",
+                                          text: "CHAIRS"),
+                                      ProductsCard(
+                                          imagePath:
+                                              "assets/images/products_single/Architecture/tables.jpeg",
+                                          text: "TABLES"),
+                                    ],
+                                  ),
+                                  SizedBox(height: 52),
+                                ],
                               )
                             : const SizedBox(),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 30),
-                  const Text(
-                    "General Products",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: textColor,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  const SizedBox(height: 26),
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "General Products",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: textColor,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 30),
+                      Wrap(
+                        spacing: 16,
+                        runSpacing: 36,
+                        alignment: WrapAlignment.start,
+                        crossAxisAlignment: WrapCrossAlignment.start,
+                        children: [
+                          ProductsCard(
+                              imagePath:
+                                  "assets/images/products_single/general/ec.jpg",
+                              text: "Electrical / Electronic Cabinets"),
+                          ProductsCard(
+                              imagePath:
+                                  "assets/images/products_single/general/ups.jpg",
+                              text: "UPS Enclosures"),
+                          ProductsCard(
+                              imagePath:
+                                  "assets/images/products_single/general/ma.jpeg",
+                              text: "Mechanical Assemblies"),
+                          ProductsCard(
+                              imagePath:
+                                  "assets/images/products_single/general/sscp.jpeg",
+                              text: "SS Cabinets/ Products"),
+                          ProductsCard(
+                              imagePath:
+                                  "assets/images/products_single/general/aa.jpeg",
+                              text: "Aluminium Assemblies"),
+                        ],
+                      ),
+                    ],
                   ),
-                  const SizedBox(width: 16),
-                  LayoutBuilder(
-                    builder:
-                        (BuildContext context, BoxConstraints constraints) {
-                      if (constraints.maxWidth > 1300) {
-                        return GridView.count(
-                          padding: const EdgeInsets.only(top: 26),
-                          physics: const NeverScrollableScrollPhysics(),
-                          childAspectRatio: 3 / 9,
-                          crossAxisCount: 6,
-                          shrinkWrap: true,
-                          crossAxisSpacing: 16,
-                          children: const [
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ec.jpg",
-                                text: "Electrical / Electronic Cabinets"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ups.jpg",
-                                text: "UPS Enclosures"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ma.jpeg",
-                                text: "Mechanical Assemblies"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/sscp.jpeg",
-                                text: "SS Cabinets/ Products"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/aa.jpeg",
-                                text: "Aluminium Assemblies"),
-                          ],
-                        );
-                      } else if (constraints.maxWidth > 1000) {
-                        return GridView.count(
-                          padding: const EdgeInsets.only(top: 26),
-                          physics: const NeverScrollableScrollPhysics(),
-                          childAspectRatio: 3 / 9,
-                          crossAxisCount: 6,
-                          shrinkWrap: true,
-                          crossAxisSpacing: 16,
-                          children: const [
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ec.jpg",
-                                text: "Electrical / Electronic Cabinets"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ups.jpg",
-                                text: "UPS Enclosures"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ma.jpeg",
-                                text: "Mechanical Assemblies"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/sscp.jpeg",
-                                text: "SS Cabinets/ Products"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/aa.jpeg",
-                                text: "Aluminium Assemblies"),
-                          ],
-                        );
-                      } else if (constraints.maxWidth > 950) {
-                        return GridView.count(
-                          padding: const EdgeInsets.only(top: 26),
-                          physics: const NeverScrollableScrollPhysics(),
-                          childAspectRatio: 2 / 4,
-                          crossAxisCount: 4,
-                          shrinkWrap: true,
-                          crossAxisSpacing: 16,
-                          children: const [
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ec.jpg",
-                                text: "Electrical / Electronic Cabinets"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ups.jpg",
-                                text: "UPS Enclosures"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ma.jpeg",
-                                text: "Mechanical Assemblies"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/sscp.jpeg",
-                                text: "SS Cabinets/ Products"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/aa.jpeg",
-                                text: "Aluminium Assemblies"),
-                          ],
-                        );
-                      } else if (constraints.maxWidth > 850) {
-                        return GridView.count(
-                          padding: const EdgeInsets.only(top: 26),
-                          physics: const NeverScrollableScrollPhysics(),
-                          childAspectRatio: 3 / 9,
-                          crossAxisCount: 4,
-                          shrinkWrap: true,
-                          crossAxisSpacing: 16,
-                          children: const [
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ec.jpg",
-                                text: "Electrical / Electronic Cabinets"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ups.jpg",
-                                text: "UPS Enclosures"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ma.jpeg",
-                                text: "Mechanical Assemblies"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/sscp.jpeg",
-                                text: "SS Cabinets/ Products"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/aa.jpeg",
-                                text: "Aluminium Assemblies"),
-                          ],
-                        );
-                      } else if (constraints.maxWidth < 600) {
-                        return GridView.count(
-                          padding: const EdgeInsets.only(top: 26),
-                          physics: const NeverScrollableScrollPhysics(),
-                          childAspectRatio: 3 / 9,
-                          crossAxisCount: 3,
-                          shrinkWrap: true,
-                          crossAxisSpacing: 16,
-                          children: const [
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ec.jpg",
-                                text: "Electrical / Electronic Cabinets"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ups.jpg",
-                                text: "UPS Enclosures"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ma.jpeg",
-                                text: "Mechanical Assemblies"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/sscp.jpeg",
-                                text: "SS Cabinets/ Products"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/aa.jpeg",
-                                text: "Aluminium Assemblies"),
-                          ],
-                        );
-                      } else {
-                        return GridView.count(
-                          padding: const EdgeInsets.only(top: 26),
-                          physics: const NeverScrollableScrollPhysics(),
-                          childAspectRatio: 3 / 9,
-                          crossAxisCount: 3,
-                          shrinkWrap: true,
-                          crossAxisSpacing: 16,
-                          children: const [
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ec.jpg",
-                                text: "Electrical / Electronic Cabinets"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ups.jpg",
-                                text: "UPS Enclosures"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/ma.jpeg",
-                                text: "Mechanical Assemblies"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/sscp.jpeg",
-                                text: "SS Cabinets/ Products"),
-                            ProductsCard(
-                                imagePath:
-                                    "assets/images/products_single/general/aa.jpeg",
-                                text: "Aluminium Assemblies"),
-                          ],
-                        );
-                      }
-                    },
-                  ),
+                  const SizedBox(height: 72),
                 ],
               ),
             ),

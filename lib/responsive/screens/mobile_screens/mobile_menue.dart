@@ -1,58 +1,23 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:zeal_new/controllers/tab_controller.dart';
 import 'package:zeal_new/global/pallet.dart';
+import 'package:zeal_new/responsive/mobile_screen_layout.dart';
 import 'package:zeal_new/responsive/screens/mobile_screens/mobile_about_screen.dart';
 import 'package:zeal_new/responsive/screens/mobile_screens/mobile_facilities_screen.dart';
 import 'package:zeal_new/responsive/screens/mobile_screens/mobile_products_screen.dart';
 import 'package:zeal_new/widget/mobile_footer.dart';
 
 class MobileMenueScreen extends StatelessWidget {
-  const MobileMenueScreen({super.key});
+  MobileMenueScreen({super.key});
+  final tabController = Get.find<CustomTabController>();
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: PreferredSize(
-        preferredSize: const Size(
-          double.infinity,
-          56.0,
-        ),
-        child: ClipRRect(
-          child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-            child: AppBar(
-              leading: const SizedBox(),
-              title: InkWell(
-                onTap: () {
-                  Navigator.of(context).popUntil((route) => route.isFirst);
-                },
-                child: Image.asset(
-                  "assets/images/logo.png",
-                  height: 32,
-                ),
-              ),
-              centerTitle: true,
-              actions: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                  icon: const Icon(
-                    Icons.cancel_outlined,
-                    size: 32,
-                  ),
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
-              ],
-              backgroundColor: Colors.white.withOpacity(0.3),
-            ),
-          ),
-        ),
-      ),
-      body: SafeArea(
+    final size = MediaQuery.of(context).size;
+    return Drawer(
+      width: size.width,
+      child: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -63,10 +28,30 @@ class MobileMenueScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const SizedBox(height: 24),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      const SizedBox(height: 8),
+                      IconButton(
+                        onPressed: () {
+                          tabController.closeEndDrawer(context);
+                        },
+                        icon: const Icon(
+                          Icons.cancel_outlined,
+                          size: 32,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 42),
                   InkWell(
                     onTap: () {
-                      Navigator.of(context).popUntil((route) => route.isFirst);
+                      Navigator.of(context).pushAndRemoveUntil(
+                          MaterialPageRoute(
+                            builder: (context) => const MobileScreenLayout(),
+                          ),
+                          (route) => false);
                     },
                     child: Container(
                       decoration: BoxDecoration(

@@ -3,8 +3,10 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:zeal_new/global/pallet.dart';
+import 'package:zeal_new/responsive/mobile_screen_layout.dart';
 import 'package:zeal_new/responsive/screens/mobile_screens/mobile_menue.dart';
 import 'package:zeal_new/widget/facilites_card.dart';
+import 'package:zeal_new/widget/menue_button.dart';
 import 'package:zeal_new/widget/mobile_footer.dart';
 
 class MobileFacilitiesScreen extends StatelessWidget {
@@ -13,6 +15,7 @@ class MobileFacilitiesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: MobileMenueScreen(),
       extendBodyBehindAppBar: true,
       appBar: PreferredSize(
         preferredSize: const Size(
@@ -25,7 +28,11 @@ class MobileFacilitiesScreen extends StatelessWidget {
             child: AppBar(
               title: InkWell(
                 onTap: () {
-                  Navigator.of(context).popUntil((route) => route.isFirst);
+                  Navigator.of(context).pushAndRemoveUntil(
+                      MaterialPageRoute(
+                        builder: (context) => const MobileScreenLayout(),
+                      ),
+                      (route) => false);
                 },
                 child: Image.asset(
                   "assets/images/logo.png",
@@ -33,21 +40,9 @@ class MobileFacilitiesScreen extends StatelessWidget {
                 ),
               ),
               centerTitle: true,
-              actions: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const MobileMenueScreen(),
-                      ),
-                    );
-                  },
-                  icon: SvgPicture.asset(
-                    "assets/images/menu.svg",
-                    height: 20,
-                  ),
-                ),
-                const SizedBox(width: 10),
+              actions: const [
+                MenueButton(),
+                SizedBox(width: 10),
               ],
               backgroundColor: Colors.white.withOpacity(0.3),
             ),
@@ -65,7 +60,7 @@ class MobileFacilitiesScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Areas of Service",
+                    "Our Facilities",
                     style: TextStyle(
                       fontSize: 24,
                       color: textColor,

@@ -18,9 +18,10 @@ class MyApp extends StatelessWidget {
       initialBinding: AllBindings(),
       title: 'Zeal Manufacturing',
       theme: ThemeData(
-        textTheme: GoogleFonts.poppinsTextTheme(
+        textTheme: GoogleFonts.montserratTextTheme(
           Theme.of(context).textTheme,
         ),
+        scaffoldBackgroundColor: const Color(0XFFF3F9FF),
         useMaterial3: true,
       ),
       initialRoute: "/",

@@ -52,7 +52,7 @@ class _HeroSliderState extends State<HeroSlider> {
               activeIndex: _activeIndex, isMobile: GetPlatform.isMobile),
         ),
         Positioned(
-          left: GetPlatform.isMobile ? 30 : 100,
+          left: GetPlatform.isMobile ? 10 : 100,
           top: 0,
           bottom: 0,
           child: InkWell(
@@ -64,7 +64,9 @@ class _HeroSliderState extends State<HeroSlider> {
               carouselController.previousPage();
             },
             child: Container(
-              padding: const EdgeInsets.all(14),
+              padding: GetPlatform.isMobile
+                  ? const EdgeInsets.all(0)
+                  : const EdgeInsets.all(14),
               decoration: const BoxDecoration(
                 color: Color.fromARGB(180, 255, 255, 255),
                 shape: BoxShape.circle,
@@ -79,7 +81,7 @@ class _HeroSliderState extends State<HeroSlider> {
           ),
         ),
         Positioned(
-          right: GetPlatform.isMobile ? 30 : 100,
+          right: GetPlatform.isMobile ? 10 : 100,
           top: 0,
           bottom: 0,
           child: InkWell(
@@ -91,7 +93,9 @@ class _HeroSliderState extends State<HeroSlider> {
               carouselController.nextPage();
             },
             child: Container(
-              padding: const EdgeInsets.all(14),
+              padding: GetPlatform.isMobile
+                  ? const EdgeInsets.all(0)
+                  : const EdgeInsets.all(14),
               decoration: const BoxDecoration(
                 color: Color.fromARGB(180, 255, 255, 255),
                 shape: BoxShape.circle,
@@ -99,7 +103,7 @@ class _HeroSliderState extends State<HeroSlider> {
               child: Center(
                 child: Image.asset(
                   "assets/images/right.png",
-                  height: GetPlatform.isMobile ? 20 : 40,
+                  height: GetPlatform.isMobile ? 12 : 40,
                 ),
               ),
             ),

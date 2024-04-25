@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:zeal_new/controllers/tab_controller.dart';
 import 'package:zeal_new/global/pallet.dart';
 import 'package:zeal_new/widget/about_container.dart';
@@ -145,12 +146,14 @@ class AboutScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const SizedBox(height: 80),
-                  const Text(
+                  Text(
                     "Zeal Manufacturing Company",
-                    style: TextStyle(
-                      fontSize: 32,
-                      fontWeight: FontWeight.w500,
-                      color: textColor,
+                    style: GoogleFonts.libreCaslonText(
+                      textStyle: const TextStyle(
+                        fontSize: 32,
+                        fontWeight: FontWeight.w500,
+                        color: textColor,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 36),
@@ -158,7 +161,7 @@ class AboutScreen extends StatelessWidget {
                   const SizedBox(height: 72),
                   const Text(
                     textAlign: TextAlign.center,
-                    'Zeal Manufacturing Company is an ISO 9001-2015 certified company, specializing in sheet metal fabrication for all types of industrial requirements in light, medium, and heavy categories. We ZMC is committed to achieving sustained business excellence by integrating its quality values at all levels to anticipate, meet and exceed customer expectations and continuously improve the work to deliver the "Best in Quality Sheet Metal Products and precision machined parts" and more cost effectively than its competitors.',
+                    'Zeal Manufacturing Company is an ISO 9001-2015-certified company, specializing in sheet metal fabrication for all types of industrial requirements in light, medium, and heavy categories. Zeal Manufacturing is dedicated to attaining sustained business excellence through continuous improvement. We achieve this by integrating our unwavering commitment to quality at every stage, ensuring the most cost-effective delivery of high-quality sheet metal products and precise machined parts.',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.normal,
@@ -166,60 +169,302 @@ class AboutScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 52),
-                  const Column(
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         "Who We are",
-                        style: TextStyle(
-                          fontSize: 32,
-                          fontWeight: FontWeight.bold,
-                          color: textColor,
+                        style: GoogleFonts.libreCaslonText(
+                          textStyle: const TextStyle(
+                            fontSize: 28,
+                            fontWeight: FontWeight.w600,
+                            color: textColor,
+                          ),
                         ),
                       ),
-                      SizedBox(height: 18),
+                      const SizedBox(height: 18),
                       Text(
                         "Zeal Manufacturing Company provides",
-                        style: TextStyle(
-                          fontSize: 28,
-                          fontWeight: FontWeight.w500,
-                          color: textColor,
+                        style: GoogleFonts.libreCaslonText(
+                          textStyle: const TextStyle(
+                            fontSize: 26,
+                            fontWeight: FontWeight.w500,
+                            color: textColor,
+                          ),
                         ),
                       ),
-                      SizedBox(height: 16),
-                      Text(
-                        "• High precision customized Sheet Metal - Parts, assemblies.\n• CNC Machined and Turned parts\n• Custom Made Industrial Racks\n• Architecture Metal Manufacturing Support\n• Rapid Prototyping Parts - ( RPT)\n• Stainless Steel product & Assembly\n• Heavy Engineering works\n• Aluminum parts and assemblies\n• Certified Welding and assembly team.\n• Team of good qualified engineers for better quality and problem solving",
+                      const SizedBox(height: 16),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'High precision customized Sheet Metal - Parts, assemblies.',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'CNC Machined and Turned parts',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'Custom Made Industrial Racks',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'Architecture Metal Manufacturing Support',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'Rapid Prototyping Parts - ( RPT)',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'Stainless Steel product & Assembly',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'Heavy Engineering works',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'Aluminum parts and assemblies',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'Certified Welding and assembly team.',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'Team of good qualified engineers for better quality and problem solving',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      const Text(
+                        "Our engineering team supports client requirements using Computer Aided Manufacturing software to provide more realistic view of parts and assemblies to avoid rejections, which will save energy and time.",
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.normal,
                           color: textColor,
                         ),
                       ),
-                      SizedBox(height: 18),
-                      Text(
-                        "Our engineering team supports clients requirement using computer aided manufacturing software to  provide more realistic view of parts and assemblies to avoid rejections which will intern save  energy and time.",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.normal,
-                          color: textColor,
-                        ),
-                      ),
-                      SizedBox(height: 36),
+                      const SizedBox(height: 36),
                       Text(
                         "Explore Our Product Collection",
-                        style: TextStyle(
-                          fontSize: 32,
-                          fontWeight: FontWeight.bold,
-                          color: textColor,
+                        style: GoogleFonts.libreCaslonText(
+                          textStyle: const TextStyle(
+                            fontSize: 28,
+                            fontWeight: FontWeight.w600,
+                            color: textColor,
+                          ),
                         ),
                       ),
-                      SizedBox(height: 16),
-                      Text(
-                        "• Customised sheet metal parts manufacturing\n• Machined parts\n• Turned parts\n• Military grade assemblies and Rugged enclosures.\n• Stainless Steel Food grade products\n• Aluminium consoles and milled parts\n• Special Purpose machines\n• Electrical Wiring and testing",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.normal,
-                          color: textColor,
+                      const SizedBox(height: 16),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'Customised sheet metal parts manufacturing',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'Machined parts',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'Turned parts',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'Military grade assemblies and Rugged enclosures.',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'Stainless steel food grade products',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'Aluminium consoles and Milled parts',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'Special purpose machines',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.api_rounded,
+                          size: 20,
+                        ),
+                        title: Text(
+                          'Electrical wiring and Testing',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: textColor,
+                          ),
                         ),
                       ),
                     ],
@@ -232,98 +477,120 @@ class AboutScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       color: aboutColor,
                     ),
-                    child: const Column(
+                    child: Column(
                       children: [
                         Text(
                           "OUR IMPORTS & EXPORTS",
-                          style: TextStyle(
-                            fontSize: 32,
-                            fontWeight: FontWeight.bold,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.w600,
+                              color: textColor,
+                            ),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 46),
                         Text(
                           "WE DO EXPORT TO",
-                          style: TextStyle(
-                            fontSize: 26,
-                            fontWeight: FontWeight.w600,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.w600,
+                              color: textColor,
+                            ),
                           ),
                         ),
-                        SizedBox(height: 16),
+                        const SizedBox(height: 16),
                         Text(
                           "USA-TEXAS AND CALIFORNIA",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.normal,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: textColor,
+                            ),
                           ),
                         ),
                         Text(
                           "EUROPE ",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.normal,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: textColor,
+                            ),
                           ),
                         ),
                         Text(
                           "ARAB",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.normal,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: textColor,
+                            ),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         Text(
                           "WE HAVE IMPORT FROM",
-                          style: TextStyle(
-                            fontSize: 26,
-                            fontWeight: FontWeight.w600,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.w600,
+                              color: textColor,
+                            ),
                           ),
                         ),
-                        SizedBox(height: 16),
+                        const SizedBox(height: 16),
                         Text(
                           "CHINA",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.normal,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: textColor,
+                            ),
                           ),
                         ),
                         Text(
                           "CANADA",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.normal,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: textColor,
+                            ),
                           ),
                         ),
                         Text(
                           "EUROPE",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.normal,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: textColor,
+                            ),
                           ),
                         ),
                         Text(
                           "SOUTH AFRICA AND",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.normal,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: textColor,
+                            ),
                           ),
                         ),
                         Text(
                           "USA....ETC",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.normal,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: textColor,
+                            ),
                           ),
                         ),
                       ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:zeal_new/global/pallet.dart';
 
 class AboutContainer extends StatelessWidget {
@@ -31,20 +32,23 @@ class AboutContainer extends StatelessWidget {
         Positioned(
           bottom: isMobile ? -35 : -50,
           child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            padding: EdgeInsets.symmetric(
+                horizontal: isMobile ? 30 : 60, vertical: isMobile ? 10 : 20),
             decoration: BoxDecoration(
               color: Colors.white.withOpacity(0.8),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
                   "From Imagination to Innovation",
-                  style: TextStyle(
-                    fontSize: isMobile ? 16 : 34,
-                    color: blackColor,
-                    fontWeight: FontWeight.w600,
+                  style: GoogleFonts.montserrat(
+                    textStyle: TextStyle(
+                      fontSize: isMobile ? 16 : 34,
+                      color: blackColor,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
                 isMobile
@@ -53,11 +57,14 @@ class AboutContainer extends StatelessWidget {
                       )
                     : const SizedBox(),
                 Text(
-                  "We Craft the Hardware You Dream Of",
-                  style: TextStyle(
-                    fontSize: isMobile ? 12 : 28,
-                    color: blackColor,
-                    fontWeight: FontWeight.w600,
+                  "We craft the hardware you dream of",
+                  style: GoogleFonts.montserrat(
+                    textStyle: TextStyle(
+                      fontStyle: FontStyle.italic,
+                      fontSize: isMobile ? 12 : 18,
+                      color: blackColor,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
               ],

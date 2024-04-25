@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:zeal_new/global/pallet.dart';
 import 'package:zeal_new/responsive/mobile_screen_layout.dart';
 import 'package:zeal_new/responsive/screens/mobile_screens/mobile_menue.dart';
@@ -56,19 +57,21 @@ class MobileFacilitiesScreen extends StatelessWidget {
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 20).copyWith(top: 80),
-              child: const Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     "Our Facilities",
-                    style: TextStyle(
-                      fontSize: 24,
-                      color: textColor,
-                      fontWeight: FontWeight.w500,
+                    style: GoogleFonts.libreCaslonText(
+                      textStyle: const TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w500,
+                        color: textColor,
+                      ),
                     ),
                   ),
-                  SizedBox(height: 20),
-                  Column(
+                  const SizedBox(height: 20),
+                  const Column(
                     children: [
                       Wrap(
                         spacing: 8,
@@ -77,7 +80,7 @@ class MobileFacilitiesScreen extends StatelessWidget {
                           FacilitiesCard(
                             isMobile: true,
                             imagePath: "assets/images/facilities/lc.png",
-                            title: "Laser cutting",
+                            title: "Laser Cutting",
                             text:
                                 "Precision cuts for flawless electrical panels.",
                           ),
@@ -86,7 +89,7 @@ class MobileFacilitiesScreen extends StatelessWidget {
                             imagePath: "assets/images/facilities/b.png",
                             title: "Bending",
                             text:
-                                "Transforming flat metal into the perfect form for your electrical needs.",
+                                "Precise shaping of sheet metal to fulfill specific electrical requirements",
                           ),
                           FacilitiesCard(
                             isMobile: true,
@@ -112,14 +115,14 @@ class MobileFacilitiesScreen extends StatelessWidget {
                           FacilitiesCard(
                             isMobile: true,
                             imagePath: "assets/images/facilities/dd.png",
-                            title: "Design and development  (2D and 3D)",
+                            title: "Design and Development  (2D and 3D)",
                             text:
                                 "Material: Mild Steel, Stainless Steel, Aluminum of all grades",
                           ),
                           FacilitiesCard(
                             isMobile: true,
                             imagePath: "assets/images/facilities/wt.png",
-                            title: "Wiring and testing",
+                            title: "Wiring and Testing",
                             text:
                                 "Precision wiring and rigorous testing for ultimate electrical panel reliability",
                           ),

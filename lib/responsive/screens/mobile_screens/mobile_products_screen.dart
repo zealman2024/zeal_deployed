@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:zeal_new/controllers/tab_controller.dart';
 import 'package:zeal_new/global/pallet.dart';
 import 'package:zeal_new/responsive/mobile_screen_layout.dart';
@@ -74,12 +75,14 @@ class MobileProductsPage extends StatelessWidget {
                           },
                           child: Row(
                             children: [
-                              const Text(
+                              Text(
                                 "Defence Sector",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: textColor,
-                                  fontWeight: FontWeight.bold,
+                                style: GoogleFonts.libreCaslonText(
+                                  textStyle: const TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                    color: textColor,
+                                  ),
                                 ),
                               ),
                               const SizedBox(width: 6),
@@ -156,12 +159,14 @@ class MobileProductsPage extends StatelessWidget {
                           },
                           child: Row(
                             children: [
-                              const Text(
+                               Text(
                                 "Food Processing Industry",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: textColor,
-                                  fontWeight: FontWeight.bold,
+                                style: GoogleFonts.libreCaslonText(
+                                  textStyle: const TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                    color: textColor,
+                                  ),
                                 ),
                               ),
                               const SizedBox(width: 6),
@@ -245,12 +250,14 @@ class MobileProductsPage extends StatelessWidget {
                           },
                           child: Row(
                             children: [
-                              const Text(
+                               Text(
                                 "Architecture",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: textColor,
-                                  fontWeight: FontWeight.bold,
+                                style: GoogleFonts.libreCaslonText(
+                                  textStyle: const TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                    color: textColor,
+                                  ),
                                 ),
                               ),
                               const SizedBox(width: 6),
@@ -275,7 +282,7 @@ class MobileProductsPage extends StatelessWidget {
                                           imagePath:
                                               "assets/images/products_single/Architecture/sskl.png",
                                           text:
-                                              "STAINLESS STEEL KITCHES / LABS"),
+                                              "STAINLESS STEEL KITCHEN / LABS"),
                                       ProductsCard(
                                           isMobile: true,
                                           imagePath:
@@ -306,7 +313,7 @@ class MobileProductsPage extends StatelessWidget {
                                           imagePath:
                                               "assets/images/products_single/Architecture/mscr.jpeg",
                                           text:
-                                              "METALIC STAIR CASE & RAILINGS"),
+                                              "METALLIC STAIR CASE & RAILINGS"),
                                       ProductsCard(
                                           isMobile: true,
                                           imagePath:
@@ -333,13 +340,15 @@ class MobileProductsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  const Text(
+                   Text(
                     "General Products",
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: textColor,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: GoogleFonts.libreCaslonText(
+                                  textStyle: const TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                    color: textColor,
+                                  ),
+                                ),
                   ),
                   const SizedBox(height: 26),
                   const Column(

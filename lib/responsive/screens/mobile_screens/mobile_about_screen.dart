@@ -390,98 +390,121 @@ class MobileAboutScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       color: aboutColor,
                     ),
-                    child: const Column(
+                    child: Column(
                       children: [
                         Text(
                           "OUR IMPORTS & EXPORTS",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: textColor,
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.w600,
+                              color: textColor,
+                            ),
                           ),
                         ),
-                        SizedBox(height: 16),
+                        const SizedBox(height: 20),
                         Text(
                           "WE DO EXPORT TO",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                              color: textColor,
+                            ),
                           ),
                         ),
-                        SizedBox(height: 12),
+                        const SizedBox(height: 12),
                         Text(
                           "USA-TEXAS AND CALIFORNIA",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.normal,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: textColor,
+                            ),
                           ),
                         ),
                         Text(
                           "EUROPE ",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.normal,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: textColor,
+                            ),
                           ),
                         ),
                         Text(
                           "ARAB",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.normal,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: textColor,
+                            ),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         Text(
                           "WE HAVE IMPORT FROM",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                              color: textColor,
+                            ),
                           ),
                         ),
-                        SizedBox(height: 16),
+                        const SizedBox(height: 16),
                         Text(
                           "CHINA",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.normal,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: textColor,
+                            ),
                           ),
                         ),
                         Text(
                           "CANADA",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.normal,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: textColor,
+                            ),
                           ),
                         ),
                         Text(
                           "EUROPE",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.normal,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: textColor,
+                            ),
                           ),
                         ),
                         Text(
                           "SOUTH AFRICA AND",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.normal,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: textColor,
+                            ),
                           ),
                         ),
                         Text(
                           "USA....ETC",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.normal,
-                            color: textColor,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: textColor,
+                            ),
                           ),
                         ),
                       ],

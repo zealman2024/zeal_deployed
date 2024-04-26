@@ -65,7 +65,7 @@ class MobileFacilitiesScreen extends StatelessWidget {
                     style: GoogleFonts.libreCaslonText(
                       textStyle: const TextStyle(
                         fontSize: 24,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w600,
                         color: textColor,
                       ),
                     ),

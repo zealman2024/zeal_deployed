@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:zeal_new/controllers/tab_controller.dart';
 import 'package:zeal_new/global/pallet.dart';
 import 'package:zeal_new/responsive/mobile_screen_layout.dart';
@@ -18,6 +21,7 @@ class MobileMenueScreen extends StatelessWidget {
     return Drawer(
       width: size.width,
       child: ListView(
+        shrinkWrap: true,
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -58,12 +62,14 @@ class MobileMenueScreen extends StatelessWidget {
                       horizontal: 10,
                       vertical: 5,
                     ),
-                    child: const Text(
+                    child: Text(
                       'Home',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: textColor,
-                        fontWeight: FontWeight.w600,
+                      style: GoogleFonts.libreCaslonText(
+                        textStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: textColor,
+                        ),
                       ),
                     ),
                   ),
@@ -85,12 +91,14 @@ class MobileMenueScreen extends StatelessWidget {
                       horizontal: 10,
                       vertical: 5,
                     ),
-                    child: const Text(
+                    child: Text(
                       'Products & Services',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: textColor,
-                        fontWeight: FontWeight.w600,
+                      style: GoogleFonts.libreCaslonText(
+                        textStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: textColor,
+                        ),
                       ),
                     ),
                   ),
@@ -112,12 +120,14 @@ class MobileMenueScreen extends StatelessWidget {
                       horizontal: 10,
                       vertical: 5,
                     ),
-                    child: const Text(
+                    child: Text(
                       'Facilities',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: textColor,
-                        fontWeight: FontWeight.w600,
+                      style: GoogleFonts.libreCaslonText(
+                        textStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: textColor,
+                        ),
                       ),
                     ),
                   ),
@@ -139,12 +149,14 @@ class MobileMenueScreen extends StatelessWidget {
                       horizontal: 10,
                       vertical: 5,
                     ),
-                    child: const Text(
+                    child: Text(
                       'About',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: textColor,
-                        fontWeight: FontWeight.w600,
+                      style: GoogleFonts.libreCaslonText(
+                        textStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: textColor,
+                        ),
                       ),
                     ),
                   ),
@@ -152,7 +164,19 @@ class MobileMenueScreen extends StatelessWidget {
               ],
             ),
           ),
-          MobileFooter(),
+          const SizedBox(
+            height: 36,
+          ),
+          const SizedBox(
+            height: 36,
+          ),
+          const SizedBox(
+            height: 36,
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: MobileFooter(),
+          ),
         ],
       ),
     );

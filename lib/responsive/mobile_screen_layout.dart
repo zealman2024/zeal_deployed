@@ -144,37 +144,27 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
                               isMobile: true,
                               imagePath: "assets/images/services/defence.png",
                               text: "Defense Sector"),
-                          SizedBox(
-                            height: 20,
-                          ),
+                          
                           ProductsCard(
                               isMobile: true,
                               imagePath: "assets/images/services/hydrolics.png",
                               text: "Industrial Hydraulics"),
-                          SizedBox(
-                            height: 20,
-                          ),
+                          
                           ProductsCard(
                               isMobile: true,
                               imagePath: "assets/images/services/medical.png",
                               text: "Medical Electronics"),
-                          SizedBox(
-                            height: 20,
-                          ),
+                          
                           ProductsCard(
                               isMobile: true,
                               imagePath: "assets/images/services/airports.png",
                               text: "Infrastructure-Airports"),
-                          SizedBox(
-                            height: 20,
-                          ),
+                         
                           ProductsCard(
                               isMobile: true,
                               imagePath: "assets/images/services/food.png",
                               text: "Food Industry"),
-                          SizedBox(
-                            height: 20,
-                          ),
+                          
                           ProductsCard(
                               isMobile: true,
                               imagePath:
@@ -182,7 +172,7 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
                               text: "Architecture"),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                     ],

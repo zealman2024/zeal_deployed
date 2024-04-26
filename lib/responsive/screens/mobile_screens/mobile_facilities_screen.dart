@@ -1,7 +1,5 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zeal_new/global/pallet.dart';
 import 'package:zeal_new/responsive/mobile_screen_layout.dart';

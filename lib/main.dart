@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.montserratTextTheme(
           Theme.of(context).textTheme,
         ),
-        scaffoldBackgroundColor: const Color(0XFFF3F9FF),
+        scaffoldBackgroundColor: const Color(0XFFf8fbfe),
         useMaterial3: true,
       ),
       initialRoute: "/",

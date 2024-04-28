@@ -57,17 +57,6 @@ class MobileAboutScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const SizedBox(height: 80),
-                  Text(
-                    "Zeal Manufacturing Company",
-                    style: GoogleFonts.libreCaslonText(
-                      textStyle: const TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w500,
-                        color: textColor,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 20),
                   const AboutContainer(
                     isMobile: true,
                   ),

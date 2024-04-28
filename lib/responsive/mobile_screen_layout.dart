@@ -68,17 +68,8 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(height: 16),
-                  Text(
-                    "Zeal Manufacturing Company",
-                    style: GoogleFonts.libreCaslonText(
-                      textStyle: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        color: textColor,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 16),
+                 
+                  
                   const AboutContainer(
                     isMobile: true,
                   ),

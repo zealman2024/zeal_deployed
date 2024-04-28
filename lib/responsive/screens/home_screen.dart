@@ -31,7 +31,9 @@ class _HomeScreenState extends State<HomeScreen> {
             const Column(
               children: [
                 SizedBox(height: 80),
-                HeroSlider(),
+                AboutContainer(),
+                SizedBox(height: 30),
+                // HeroSlider(),
               ],
             ),
             Padding(
@@ -40,21 +42,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(height: 50),
-                  Text(
-                    "Zeal Manufacturing Company",
-                    style: GoogleFonts.libreCaslonText(
-                      textStyle: const TextStyle(
-                        fontSize: 32,
-                        fontWeight: FontWeight.w500,
-                        color: textColor,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 36),
-                  const AboutContainer(),
+                  // const AboutContainer(),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: size.width * 0.12)
-                        .copyWith(top: 100),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: size.width * 0.12),
                     child: const Text(
                       textAlign: TextAlign.center,
                       "Zeal Manufacturing Company is an ISO 9001-2015 certified company, specializing in sheet metal fabrication for all types of industrial requirements in light, medium and heavy categories.",

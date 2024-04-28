@@ -231,6 +231,17 @@ class MobileFooter extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 8),
+                  Text(
+                    "Zeal Manufacturing Company",
+                    style: GoogleFonts.libreCaslonText(
+                      textStyle: const TextStyle(
+                        fontSize: 14,
+                        color: whiteColor,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
                   const Text(
                     softWrap: true,
                     overflow: TextOverflow.clip,

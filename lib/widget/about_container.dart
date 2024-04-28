@@ -42,8 +42,8 @@ class AboutContainer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  "From Imagination to Innovation",
-                  style: GoogleFonts.montserrat(
+                  "Zeal Manufacturing Company",
+                  style: GoogleFonts.libreCaslonText(
                     textStyle: TextStyle(
                       fontSize: isMobile ? 16 : 34,
                       color: blackColor,
@@ -57,7 +57,7 @@ class AboutContainer extends StatelessWidget {
                       )
                     : const SizedBox(),
                 Text(
-                  "We craft the hardware you dream of",
+                  "Expertise in metal manufacturing",
                   style: GoogleFonts.montserrat(
                     textStyle: TextStyle(
                       fontStyle: FontStyle.italic,

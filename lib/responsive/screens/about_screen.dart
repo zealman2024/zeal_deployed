@@ -146,17 +146,6 @@ class AboutScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const SizedBox(height: 80),
-                  Text(
-                    "Zeal Manufacturing Company",
-                    style: GoogleFonts.libreCaslonText(
-                      textStyle: const TextStyle(
-                        fontSize: 32,
-                        fontWeight: FontWeight.w500,
-                        color: textColor,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 36),
                   const AboutContainer(),
                   const SizedBox(height: 72),
                   const Text(

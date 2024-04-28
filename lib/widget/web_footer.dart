@@ -42,12 +42,12 @@ class WebFooter extends StatelessWidget {
                     Text(
                       "Our Certifications",
                       style: GoogleFonts.libreCaslonText(
-                            textStyle: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                              color: textColor,
-                            ),
-                          ),
+                        textStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: textColor,
+                        ),
+                      ),
                     ),
                     const SizedBox(height: 8),
                     const Text(
@@ -88,19 +88,19 @@ class WebFooter extends StatelessWidget {
                   ],
                 ),
               ),
-               Flexible(
+              Flexible(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "Products",
                       style: GoogleFonts.libreCaslonText(
-                            textStyle: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                              color: textColor,
-                            ),
-                          ),
+                        textStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: textColor,
+                        ),
+                      ),
                     ),
                     const SizedBox(height: 8),
                     const Text(
@@ -172,15 +172,15 @@ class WebFooter extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                     Text(
+                    Text(
                       "Contact Us",
                       style: GoogleFonts.libreCaslonText(
-                            textStyle: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                              color: textColor,
-                            ),
-                          ),
+                        textStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: textColor,
+                        ),
+                      ),
                     ),
                     const SizedBox(height: 8),
                     const Text(
@@ -269,6 +269,16 @@ class WebFooter extends StatelessWidget {
                       fontSize: 16,
                       fontWeight: FontWeight.normal,
                       color: whiteColor,
+                    ),
+                  ),
+                ),
+                Text(
+                  "Zeal Manufacturing Company",
+                  style: GoogleFonts.libreCaslonText(
+                    textStyle: const TextStyle(
+                      fontSize: 20,
+                      color: whiteColor,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),

@@ -72,9 +72,9 @@ class _ProductsCardState extends State<ProductsCard> {
             child: Text(
               widget.text,
               style: TextStyle(
-                fontSize: widget.isMobile ? 16 : 20,
+                fontSize: widget.isMobile ? 14 : 20,
                 color: textColor,
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.w600,
               ),
             ),
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:zeal_new/controllers/tab_controller.dart';
 import 'package:zeal_new/global/pallet.dart';
 
@@ -33,21 +34,23 @@ class WebFooter extends StatelessWidget {
                 "assets/images/logo.png",
                 height: 55,
               ),
-              const Flexible(
+              Flexible(
                 fit: FlexFit.tight,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "Our Certifications",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
-                        color: textColor,
+                      style: GoogleFonts.libreCaslonText(
+                        textStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: textColor,
+                        ),
                       ),
                     ),
-                    SizedBox(height: 8),
-                    Text(
+                    const SizedBox(height: 8),
+                    const Text(
                       "ISO 9001-2015",
                       style: TextStyle(
                         fontSize: 16,
@@ -55,8 +58,8 @@ class WebFooter extends StatelessWidget {
                         color: textColor,
                       ),
                     ),
-                    SizedBox(height: 4),
-                    Text(
+                    const SizedBox(height: 4),
+                    const Text(
                       "ISO 14001",
                       style: TextStyle(
                         fontSize: 16,
@@ -64,8 +67,8 @@ class WebFooter extends StatelessWidget {
                         color: textColor,
                       ),
                     ),
-                    SizedBox(height: 4),
-                    Text(
+                    const SizedBox(height: 4),
+                    const Text(
                       "Welder Qualiffications - WTS",
                       style: TextStyle(
                         fontSize: 16,
@@ -73,8 +76,8 @@ class WebFooter extends StatelessWidget {
                         color: textColor,
                       ),
                     ),
-                    SizedBox(height: 4),
-                    Text(
+                    const SizedBox(height: 4),
+                    const Text(
                       "EN 15085/2 Certiffication Under Process\n(Locomotive Welding Certifficate )",
                       style: TextStyle(
                         fontSize: 16,
@@ -85,20 +88,22 @@ class WebFooter extends StatelessWidget {
                   ],
                 ),
               ),
-              const Flexible(
+              Flexible(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "Products",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
-                        color: textColor,
+                      style: GoogleFonts.libreCaslonText(
+                        textStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: textColor,
+                        ),
                       ),
                     ),
-                    SizedBox(height: 8),
-                    Text(
+                    const SizedBox(height: 8),
+                    const Text(
                       "Electric panel (Indoor/Outdore) ",
                       style: TextStyle(
                         fontSize: 16,
@@ -106,8 +111,8 @@ class WebFooter extends StatelessWidget {
                         color: textColor,
                       ),
                     ),
-                    SizedBox(height: 4),
-                    Text(
+                    const SizedBox(height: 4),
+                    const Text(
                       "Machined And Turned Parts",
                       style: TextStyle(
                         fontSize: 16,
@@ -115,8 +120,8 @@ class WebFooter extends StatelessWidget {
                         color: textColor,
                       ),
                     ),
-                    SizedBox(height: 4),
-                    Text(
+                    const SizedBox(height: 4),
+                    const Text(
                       "Mechanical Assembly",
                       style: TextStyle(
                         fontSize: 16,
@@ -124,8 +129,8 @@ class WebFooter extends StatelessWidget {
                         color: textColor,
                       ),
                     ),
-                    SizedBox(height: 4),
-                    Text(
+                    const SizedBox(height: 4),
+                    const Text(
                       "Hydraulic Tanks & Power Packs",
                       style: TextStyle(
                         fontSize: 16,
@@ -133,8 +138,8 @@ class WebFooter extends StatelessWidget {
                         color: textColor,
                       ),
                     ),
-                    SizedBox(height: 4),
-                    Text(
+                    const SizedBox(height: 4),
+                    const Text(
                       "Electro Mechanical Assembly",
                       style: TextStyle(
                         fontSize: 16,
@@ -142,8 +147,8 @@ class WebFooter extends StatelessWidget {
                         color: textColor,
                       ),
                     ),
-                    SizedBox(height: 4),
-                    Text(
+                    const SizedBox(height: 4),
+                    const Text(
                       "Rugged Enclosures",
                       style: TextStyle(
                         fontSize: 16,
@@ -151,8 +156,8 @@ class WebFooter extends StatelessWidget {
                         color: textColor,
                       ),
                     ),
-                    SizedBox(height: 4),
-                    Text(
+                    const SizedBox(height: 4),
+                    const Text(
                       "Server & Control Racks",
                       style: TextStyle(
                         fontSize: 16,
@@ -167,19 +172,30 @@ class WebFooter extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       "Contact Us",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
-                        color: textColor,
+                      style: GoogleFonts.libreCaslonText(
+                        textStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: textColor,
+                        ),
                       ),
                     ),
                     const SizedBox(height: 8),
                     const Text(
                       softWrap: true,
                       overflow: TextOverflow.clip,
-                      "No. 48 / A , 2nd Cross, 8th Main Road,kempammaLayout, Lakshmidevinagar,Bengaluru - 560096",
+                      "No. 48 / A, 2nd Cross, 8th Main Road, Kempamma Layout, Lakshmidevinagar, Bengaluru - 560096",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.normal,
+                        color: textColor,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    const Text(
+                      "Contact : 08031211291",
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.normal,
@@ -188,23 +204,14 @@ class WebFooter extends StatelessWidget {
                     ),
                     const SizedBox(height: 4),
                     const Text(
-                      "Contact :0 8 0 3 1 2 1 1 2 9 1",
+                      "Mob : +91 9060046118 / 8310321554 ,",
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.normal,
                         color: textColor,
                       ),
                     ),
-                    const SizedBox(height: 4),
-                    const Text(
-                      "Mob : + 9 1 9 0 6 0 0 4 6 1 1 8 , 8 3 1 0 3 2 1 5 5 4 ,",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.normal,
-                        color: textColor,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
+                    const SizedBox(height: 16),
                     InkWell(
                       onTap: () {
                         tabController
@@ -262,6 +269,16 @@ class WebFooter extends StatelessWidget {
                       fontSize: 16,
                       fontWeight: FontWeight.normal,
                       color: whiteColor,
+                    ),
+                  ),
+                ),
+                Text(
+                  "Zeal Manufacturing Company",
+                  style: GoogleFonts.libreCaslonText(
+                    textStyle: const TextStyle(
+                      fontSize: 20,
+                      color: whiteColor,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),

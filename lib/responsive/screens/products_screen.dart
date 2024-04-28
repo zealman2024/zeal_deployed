@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:zeal_new/controllers/tab_controller.dart';
 import 'package:zeal_new/global/pallet.dart';
 import 'package:zeal_new/widget/product_card.dart';
@@ -38,12 +39,14 @@ class _ProductsScreenState extends State<ProductsScreen> {
                           },
                           child: Row(
                             children: [
-                              const Text(
+                              Text(
                                 "Defence Sector",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: textColor,
-                                  fontWeight: FontWeight.bold,
+                                style: GoogleFonts.libreCaslonText(
+                                  textStyle: const TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w500,
+                                    color: textColor,
+                                  ),
                                 ),
                               ),
                               const SizedBox(width: 6),
@@ -116,12 +119,14 @@ class _ProductsScreenState extends State<ProductsScreen> {
                           },
                           child: Row(
                             children: [
-                              const Text(
+                              Text(
                                 "Food Processing Industry",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: textColor,
-                                  fontWeight: FontWeight.bold,
+                                style: GoogleFonts.libreCaslonText(
+                                  textStyle: const TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w500,
+                                    color: textColor,
+                                  ),
                                 ),
                               ),
                               const SizedBox(width: 6),
@@ -200,12 +205,14 @@ class _ProductsScreenState extends State<ProductsScreen> {
                           },
                           child: Row(
                             children: [
-                              const Text(
+                              Text(
                                 "Architecture",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: textColor,
-                                  fontWeight: FontWeight.bold,
+                                style: GoogleFonts.libreCaslonText(
+                                  textStyle: const TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w500,
+                                    color: textColor,
+                                  ),
                                 ),
                               ),
                               const SizedBox(width: 6),
@@ -232,7 +239,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                           imagePath:
                                               "assets/images/products_single/Architecture/sskl.png",
                                           text:
-                                              "STAINLESS STEEL KITCHES / LABS"),
+                                              "STAINLESS STEEL KITCHEN / LABS"),
                                       ProductsCard(
                                           imagePath:
                                               "assets/images/products_single/Architecture/dp.jpeg",
@@ -257,7 +264,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                           imagePath:
                                               "assets/images/products_single/Architecture/mscr.jpeg",
                                           text:
-                                              "METALIC STAIR CASE & RAILINGS"),
+                                              "METALLIC STAIR CASE & RAILINGS"),
                                       ProductsCard(
                                           imagePath:
                                               "assets/images/products_single/Architecture/rcop.jpeg",
@@ -281,19 +288,21 @@ class _ProductsScreenState extends State<ProductsScreen> {
                     ),
                   ),
                   const SizedBox(height: 26),
-                  const Column(
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         "General Products",
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: textColor,
-                          fontWeight: FontWeight.bold,
+                        style: GoogleFonts.libreCaslonText(
+                          textStyle: const TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w500,
+                            color: textColor,
+                          ),
                         ),
                       ),
-                      SizedBox(height: 30),
-                      Wrap(
+                      const SizedBox(height: 30),
+                      const Wrap(
                         spacing: 16,
                         runSpacing: 36,
                         alignment: WrapAlignment.start,

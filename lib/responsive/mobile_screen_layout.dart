@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:zeal_new/controllers/tab_controller.dart';
 import 'package:zeal_new/global/pallet.dart';
 import 'package:zeal_new/responsive/screens/mobile_screens/mobile_about_screen.dart';
@@ -67,15 +68,8 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(height: 16),
-                  const Text(
-                    "Zeal Manufacturing Company",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: textColor,
-                    ),
-                  ),
-                  const SizedBox(height: 16),
+                 
+                  
                   const AboutContainer(
                     isMobile: true,
                   ),
@@ -84,7 +78,7 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
                         .copyWith(top: 50),
                     child: const Text(
                       textAlign: TextAlign.center,
-                      "Zeal Manufacturing Company is an ISO 9001-2015 certified company, specializing in sheet metal fabrication for all types of industrial requirements in light, medium, and heavy categories.",
+                      "Zeal Manufacturing Company is an ISO 9001-2015 certified company, specializing in sheet metal fabrication for all types of industrial requirements in light, medium and heavy categories.",
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.normal,
@@ -108,7 +102,7 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
                       child: const Text(
                         "Read More",
                         style: TextStyle(
-                          color: blackColor,
+                          color: whiteColor,
                           fontSize: 12,
                           fontWeight: FontWeight.w500,
                         ),
@@ -116,22 +110,24 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
                     ),
                   ),
                   const SizedBox(height: 32),
-                  const Column(
+                  Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
                         child: Text(
                           "Areas of Service",
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: textColor,
-                            fontWeight: FontWeight.w700,
+                          style: GoogleFonts.libreCaslonText(
+                            textStyle: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                              color: textColor,
+                            ),
                           ),
                         ),
                       ),
-                      SizedBox(height: 21),
-                      Wrap(
+                      const SizedBox(height: 21),
+                      const Wrap(
                         spacing: 16,
                         runSpacing: 16,
                         children: [
@@ -139,37 +135,27 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
                               isMobile: true,
                               imagePath: "assets/images/services/defence.png",
                               text: "Defense Sector"),
-                          SizedBox(
-                            height: 20,
-                          ),
+                          
                           ProductsCard(
                               isMobile: true,
                               imagePath: "assets/images/services/hydrolics.png",
                               text: "Industrial Hydraulics"),
-                          SizedBox(
-                            height: 20,
-                          ),
+                          
                           ProductsCard(
                               isMobile: true,
                               imagePath: "assets/images/services/medical.png",
                               text: "Medical Electronics"),
-                          SizedBox(
-                            height: 20,
-                          ),
+                          
                           ProductsCard(
                               isMobile: true,
                               imagePath: "assets/images/services/airports.png",
                               text: "Infrastructure-Airports"),
-                          SizedBox(
-                            height: 20,
-                          ),
+                         
                           ProductsCard(
                               isMobile: true,
                               imagePath: "assets/images/services/food.png",
                               text: "Food Industry"),
-                          SizedBox(
-                            height: 20,
-                          ),
+                          
                           ProductsCard(
                               isMobile: true,
                               imagePath:
@@ -177,7 +163,7 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
                               text: "Architecture"),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                     ],

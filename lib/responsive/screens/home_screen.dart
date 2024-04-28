@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:zeal_new/controllers/tab_controller.dart';
 
 import 'package:zeal_new/global/pallet.dart';
@@ -30,7 +31,9 @@ class _HomeScreenState extends State<HomeScreen> {
             const Column(
               children: [
                 SizedBox(height: 80),
-                HeroSlider(),
+                AboutContainer(),
+                SizedBox(height: 30),
+                // HeroSlider(),
               ],
             ),
             Padding(
@@ -39,22 +42,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(height: 50),
-                  const Text(
-                    "Zeal Manufacturing Company",
-                    style: TextStyle(
-                      fontSize: 32,
-                      fontWeight: FontWeight.w500,
-                      color: textColor,
-                    ),
-                  ),
-                  const SizedBox(height: 36),
-                  const AboutContainer(),
+                  // const AboutContainer(),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: size.width * 0.12)
-                        .copyWith(top: 100),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: size.width * 0.12),
                     child: const Text(
                       textAlign: TextAlign.center,
-                      "Zeal Manufacturing Company is an ISO 9001-2015 certified company, specializing in sheet metal fabrication for all types of industrial requirements in light, medium, and heavy categories.",
+                      "Zeal Manufacturing Company is an ISO 9001-2015 certified company, specializing in sheet metal fabrication for all types of industrial requirements in light, medium and heavy categories.",
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.normal,
@@ -77,26 +71,28 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: const Text(
                       "Read More",
                       style: TextStyle(
-                        color: blackColor,
+                        color: whiteColor,
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
                   const SizedBox(height: 62),
-                  const Column(
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         "Areas of Service",
-                        style: TextStyle(
-                          fontSize: 24,
-                          color: textColor,
-                          fontWeight: FontWeight.w600,
+                        style: GoogleFonts.libreCaslonText(
+                          textStyle: const TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w600,
+                            color: textColor,
+                          ),
                         ),
                       ),
-                      SizedBox(height: 36),
-                      Wrap(
+                      const SizedBox(height: 36),
+                      const Wrap(
                         spacing: 16,
                         runSpacing: 24,
                         alignment: WrapAlignment.start,

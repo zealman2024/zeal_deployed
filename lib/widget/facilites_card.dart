@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:zeal_new/global/pallet.dart';
 
 class FacilitiesCard extends StatefulWidget {
@@ -65,13 +66,15 @@ class _FacilitiesCardState extends State<FacilitiesCard> {
                 ),
               ),
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 16),
             Text(
               widget.title,
-              style: TextStyle(
-                fontSize: widget.isMobile ? 16 : 20,
-                color: textColor,
-                fontWeight: FontWeight.w600,
+              style: GoogleFonts.libreCaslonText(
+                textStyle: TextStyle(
+                  fontSize: widget.isMobile ? 16 : 20,
+                  color: textColor,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ),
             const SizedBox(height: 8),

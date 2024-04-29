@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:zeal_new/controllers/tab_controller.dart';
 import 'package:zeal_new/global/pallet.dart';
 import 'package:zeal_new/responsive/screens/about_screen.dart';
@@ -128,23 +129,27 @@ class _WebScreenLayoutState extends State<WebScreenLayout> {
                         ),
                       ),
                       const SizedBox(width: 24),
-                      Obx(
-                        () => GestureDetector(
-                          onTap: () {
-                            tabController.selectedIndex.value = 3;
-                          },
+                      InkWell(
+                        onTap: () {
+                          tabController.launchMailto();
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 15, vertical: 6),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: const Color(0XFF0094DA),
+                          ),
                           child: Text(
-                            'About',
-                            style: TextStyle(
-                              fontSize: tabController.selectedIndex.value == 3
-                                  ? 16
-                                  : 16,
-                              fontWeight: tabController.selectedIndex.value == 3
-                                  ? FontWeight.w600
-                                  : FontWeight.normal,
-                              color: tabController.selectedIndex.value == 3
-                                  ? mainColor
-                                  : const Color.fromARGB(255, 50, 50, 50),
+                            textAlign: TextAlign.center,
+                            "Contact Us",
+                            style: GoogleFonts.montserrat(
+                              fontStyle: FontStyle.italic,
+                              textStyle: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                                color: whiteColor,
+                              ),
                             ),
                           ),
                         ),

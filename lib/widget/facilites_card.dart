@@ -69,7 +69,7 @@ class _FacilitiesCardState extends State<FacilitiesCard> {
             const SizedBox(height: 16),
             Text(
               widget.title,
-              style: GoogleFonts.libreCaslonText(
+              style: GoogleFonts.montserrat(
                 textStyle: TextStyle(
                   fontSize: widget.isMobile ? 16 : 20,
                   color: textColor,

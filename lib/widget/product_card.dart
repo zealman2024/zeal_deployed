@@ -22,6 +22,7 @@ class _ProductsCardState extends State<ProductsCard> {
   Offset mousePos = const Offset(0, 0);
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return MouseRegion(
       onEnter: (e) {
         setState(() {
@@ -43,17 +44,17 @@ class _ProductsCardState extends State<ProductsCard> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AnimatedContainer(
-            curve: Curves.elasticInOut,
+            
             duration: const Duration(microseconds: 600),
             height: widget.isMobile
                 ? 150
                 : isHover
-                    ? 370
+                    ? 360
                     : 350,
             width: widget.isMobile
                 ? 150
                 : isHover
-                    ? 340
+                    ? size.width*0.22
                     : 320,
             decoration: BoxDecoration(
               color: serviceSectionColor,

@@ -43,7 +43,7 @@ class MobileAboutScreen extends StatelessWidget {
                 MenueButton(),
                 SizedBox(width: 10),
               ],
-              backgroundColor: Colors.white.withOpacity(0.3),
+              backgroundColor: Colors.white.withOpacity(0.6),
             ),
           ),
         ),
@@ -76,7 +76,7 @@ class MobileAboutScreen extends StatelessWidget {
                     children: [
                       Text(
                         "Who We are",
-                        style: GoogleFonts.libreCaslonText(
+                        style: GoogleFonts.montserrat(
                           textStyle: const TextStyle(
                             fontSize: 22,
                             fontWeight: FontWeight.w600,
@@ -87,7 +87,7 @@ class MobileAboutScreen extends StatelessWidget {
                       const SizedBox(height: 12),
                       Text(
                         "Zeal Manufacturing Company provides",
-                        style: GoogleFonts.libreCaslonText(
+                        style: GoogleFonts.lora(
                           textStyle: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
@@ -248,7 +248,7 @@ class MobileAboutScreen extends StatelessWidget {
                       const SizedBox(height: 24),
                       Text(
                         "Explore Our Product Collection",
-                        style: GoogleFonts.libreCaslonText(
+                        style: GoogleFonts.montserrat(
                           textStyle: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
@@ -384,7 +384,7 @@ class MobileAboutScreen extends StatelessWidget {
                         Text(
                           "OUR IMPORTS & EXPORTS",
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.libreCaslonText(
+                          style: GoogleFonts.montserrat(
                             textStyle: const TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.w600,
@@ -395,7 +395,7 @@ class MobileAboutScreen extends StatelessWidget {
                         const SizedBox(height: 20),
                         Text(
                           "WE DO EXPORT TO",
-                          style: GoogleFonts.libreCaslonText(
+                          style: GoogleFonts.lora(
                             textStyle: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w600,
@@ -406,7 +406,7 @@ class MobileAboutScreen extends StatelessWidget {
                         const SizedBox(height: 12),
                         Text(
                           "USA-TEXAS AND CALIFORNIA",
-                          style: GoogleFonts.libreCaslonText(
+                          style: GoogleFonts.hindMadurai(
                             textStyle: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.normal,
@@ -416,7 +416,7 @@ class MobileAboutScreen extends StatelessWidget {
                         ),
                         Text(
                           "EUROPE ",
-                          style: GoogleFonts.libreCaslonText(
+                          style: GoogleFonts.hindMadurai(
                             textStyle: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.normal,
@@ -426,7 +426,7 @@ class MobileAboutScreen extends StatelessWidget {
                         ),
                         Text(
                           "ARAB",
-                          style: GoogleFonts.libreCaslonText(
+                          style: GoogleFonts.hindMadurai(
                             textStyle: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.normal,
@@ -437,7 +437,7 @@ class MobileAboutScreen extends StatelessWidget {
                         const SizedBox(height: 20),
                         Text(
                           "WE HAVE IMPORT FROM",
-                          style: GoogleFonts.libreCaslonText(
+                          style: GoogleFonts.montserrat(
                             textStyle: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w600,
@@ -448,7 +448,7 @@ class MobileAboutScreen extends StatelessWidget {
                         const SizedBox(height: 16),
                         Text(
                           "CHINA",
-                          style: GoogleFonts.libreCaslonText(
+                          style: GoogleFonts.hindMadurai(
                             textStyle: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.normal,
@@ -458,7 +458,7 @@ class MobileAboutScreen extends StatelessWidget {
                         ),
                         Text(
                           "CANADA",
-                          style: GoogleFonts.libreCaslonText(
+                          style: GoogleFonts.hindMadurai(
                             textStyle: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.normal,
@@ -468,7 +468,7 @@ class MobileAboutScreen extends StatelessWidget {
                         ),
                         Text(
                           "EUROPE",
-                          style: GoogleFonts.libreCaslonText(
+                          style: GoogleFonts.hindMadurai(
                             textStyle: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.normal,
@@ -478,7 +478,7 @@ class MobileAboutScreen extends StatelessWidget {
                         ),
                         Text(
                           "SOUTH AFRICA AND",
-                          style: GoogleFonts.libreCaslonText(
+                          style: GoogleFonts.hindMadurai(
                             textStyle: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.normal,
@@ -488,7 +488,7 @@ class MobileAboutScreen extends StatelessWidget {
                         ),
                         Text(
                           "USA....ETC",
-                          style: GoogleFonts.libreCaslonText(
+                          style: GoogleFonts.hindMadurai(
                             textStyle: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.normal,
@@ -510,3 +510,4 @@ class MobileAboutScreen extends StatelessWidget {
     );
   }
 }
+

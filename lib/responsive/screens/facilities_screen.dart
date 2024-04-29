@@ -22,10 +22,10 @@ class FacilitiesScreen extends StatelessWidget {
                 children: [
                   Text(
                     "Our Facilities",
-                    style: GoogleFonts.libreCaslonText(
+                    style: GoogleFonts.montserrat(
                       textStyle: const TextStyle(
                         fontSize: 24,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w600,
                         color: textColor,
                       ),
                     ),

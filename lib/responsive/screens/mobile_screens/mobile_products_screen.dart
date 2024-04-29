@@ -77,7 +77,7 @@ class MobileProductsPage extends StatelessWidget {
                             children: [
                               Text(
                                 "Defence Sector",
-                                style: GoogleFonts.libreCaslonText(
+                                style: GoogleFonts.montserrat(
                                   textStyle: const TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w600,
@@ -159,9 +159,9 @@ class MobileProductsPage extends StatelessWidget {
                           },
                           child: Row(
                             children: [
-                               Text(
+                              Text(
                                 "Food Processing Industry",
-                                style: GoogleFonts.libreCaslonText(
+                                style: GoogleFonts.montserrat(
                                   textStyle: const TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w600,
@@ -250,9 +250,9 @@ class MobileProductsPage extends StatelessWidget {
                           },
                           child: Row(
                             children: [
-                               Text(
+                              Text(
                                 "Architecture",
-                                style: GoogleFonts.libreCaslonText(
+                                style: GoogleFonts.montserrat(
                                   textStyle: const TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w600,
@@ -340,15 +340,15 @@ class MobileProductsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
-                   Text(
+                  Text(
                     "General Products",
-                    style: GoogleFonts.libreCaslonText(
-                                  textStyle: const TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                    color: textColor,
-                                  ),
-                                ),
+                    style: GoogleFonts.montserrat(
+                      textStyle: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: textColor,
+                      ),
+                    ),
                   ),
                   const SizedBox(height: 26),
                   const Column(

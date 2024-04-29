@@ -76,7 +76,7 @@ class MobileFooter extends StatelessWidget {
                       children: [
                         Text(
                           "Our Certifications",
-                          style: GoogleFonts.libreCaslonText(
+                          style: GoogleFonts.montserrat(
                             textStyle: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
@@ -129,7 +129,7 @@ class MobileFooter extends StatelessWidget {
                       children: [
                         Text(
                           "Products",
-                          style: GoogleFonts.libreCaslonText(
+                          style: GoogleFonts.montserrat(
                             textStyle: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
@@ -222,7 +222,7 @@ class MobileFooter extends StatelessWidget {
                 children: [
                   Text(
                     "Contact Us",
-                    style: GoogleFonts.libreCaslonText(
+                    style: GoogleFonts.montserrat(
                       textStyle: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
@@ -233,7 +233,7 @@ class MobileFooter extends StatelessWidget {
                   const SizedBox(height: 8),
                   Text(
                     "Zeal Manufacturing Company",
-                    style: GoogleFonts.libreCaslonText(
+                    style: GoogleFonts.montserrat(
                       textStyle: const TextStyle(
                         fontSize: 14,
                         color: whiteColor,

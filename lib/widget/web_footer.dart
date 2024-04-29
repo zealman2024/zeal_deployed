@@ -41,7 +41,7 @@ class WebFooter extends StatelessWidget {
                   children: [
                     Text(
                       "Our Certifications",
-                      style: GoogleFonts.libreCaslonText(
+                      style: GoogleFonts.montserrat(
                         textStyle: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
@@ -94,7 +94,7 @@ class WebFooter extends StatelessWidget {
                   children: [
                     Text(
                       "Products",
-                      style: GoogleFonts.libreCaslonText(
+                      style: GoogleFonts.montserrat(
                         textStyle: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
@@ -174,7 +174,7 @@ class WebFooter extends StatelessWidget {
                   children: [
                     Text(
                       "Contact Us",
-                      style: GoogleFonts.libreCaslonText(
+                      style: GoogleFonts.montserrat(
                         textStyle: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
@@ -274,11 +274,11 @@ class WebFooter extends StatelessWidget {
                 ),
                 Text(
                   "Zeal Manufacturing Company",
-                  style: GoogleFonts.libreCaslonText(
+                  style: GoogleFonts.montserrat(
                     textStyle: const TextStyle(
                       fontSize: 20,
                       color: whiteColor,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),

@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       initialBinding: AllBindings(),
       title: 'Zeal Manufacturing',
       theme: ThemeData(
-        textTheme: GoogleFonts.montserratTextTheme(
+        textTheme: GoogleFonts.hindMaduraiTextTheme(
           Theme.of(context).textTheme,
         ),
         scaffoldBackgroundColor: const Color(0XFFf8fbfe),

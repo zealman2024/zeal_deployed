@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:mailto/mailto.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-
 
 class CustomTabController extends GetxController {
   final urlImages = [
@@ -31,11 +32,21 @@ class CustomTabController extends GetxController {
     }
   }
 
+  launchMailto() async {
+    final mailtoLink = Mailto(
+      to: ["info.zealman@gmail.com"],
+    ).toString();
+    final url = Uri.parse(mailtoLink);
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
-
   void openEndDrawer(BuildContext context) {
-    
     scaffoldKey.currentState!.openEndDrawer();
   }
 

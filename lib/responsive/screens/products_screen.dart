@@ -41,10 +41,10 @@ class _ProductsScreenState extends State<ProductsScreen> {
                             children: [
                               Text(
                                 "Defence Sector",
-                                style: GoogleFonts.libreCaslonText(
+                                style: GoogleFonts.montserrat(
                                   textStyle: const TextStyle(
                                     fontSize: 24,
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.w600,
                                     color: textColor,
                                   ),
                                 ),
@@ -121,10 +121,10 @@ class _ProductsScreenState extends State<ProductsScreen> {
                             children: [
                               Text(
                                 "Food Processing Industry",
-                                style: GoogleFonts.libreCaslonText(
+                                style: GoogleFonts.montserrat(
                                   textStyle: const TextStyle(
                                     fontSize: 24,
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.w600,
                                     color: textColor,
                                   ),
                                 ),
@@ -207,10 +207,10 @@ class _ProductsScreenState extends State<ProductsScreen> {
                             children: [
                               Text(
                                 "Architecture",
-                                style: GoogleFonts.libreCaslonText(
+                                style: GoogleFonts.montserrat(
                                   textStyle: const TextStyle(
                                     fontSize: 24,
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.w600,
                                     color: textColor,
                                   ),
                                 ),
@@ -293,10 +293,10 @@ class _ProductsScreenState extends State<ProductsScreen> {
                     children: [
                       Text(
                         "General Products",
-                        style: GoogleFonts.libreCaslonText(
+                        style: GoogleFonts.montserrat(
                           textStyle: const TextStyle(
                             fontSize: 24,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             color: textColor,
                           ),
                         ),

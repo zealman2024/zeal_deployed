@@ -64,7 +64,7 @@ class MobileMenueScreen extends StatelessWidget {
                     ),
                     child: Text(
                       'Home',
-                      style: GoogleFonts.libreCaslonText(
+                      style: GoogleFonts.montserrat(
                         textStyle: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
@@ -93,7 +93,7 @@ class MobileMenueScreen extends StatelessWidget {
                     ),
                     child: Text(
                       'Products & Services',
-                      style: GoogleFonts.libreCaslonText(
+                      style: GoogleFonts.montserrat(
                         textStyle: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
@@ -122,7 +122,7 @@ class MobileMenueScreen extends StatelessWidget {
                     ),
                     child: Text(
                       'Facilities',
-                      style: GoogleFonts.libreCaslonText(
+                      style: GoogleFonts.montserrat(
                         textStyle: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
@@ -151,7 +151,7 @@ class MobileMenueScreen extends StatelessWidget {
                     ),
                     child: Text(
                       'About',
-                      style: GoogleFonts.libreCaslonText(
+                      style: GoogleFonts.montserrat(
                         textStyle: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w600,

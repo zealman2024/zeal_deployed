@@ -107,24 +107,28 @@ class AboutScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Obx(
-                        () => TextButton(
-                          onPressed: () {
-                            tabController.selectedIndex.value = 3;
-                            Navigator.pop(context);
-                          },
+                      const SizedBox(width: 24),
+                      InkWell(
+                        onTap: () {
+                          tabController.launchMailto();
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 15, vertical: 6),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: const Color(0XFF0094DA),
+                          ),
                           child: Text(
-                            'About',
-                            style: TextStyle(
-                              fontSize: tabController.selectedIndex.value == 3
-                                  ? 18
-                                  : 16,
-                              fontWeight: tabController.selectedIndex.value == 3
-                                  ? FontWeight.w600
-                                  : FontWeight.normal,
-                              color: tabController.selectedIndex.value == 3
-                                  ? mainColor
-                                  : textColor,
+                            textAlign: TextAlign.center,
+                            "Contact Us",
+                            style: GoogleFonts.montserrat(
+                              fontStyle: FontStyle.italic,
+                              textStyle: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                                color: whiteColor,
+                              ),
                             ),
                           ),
                         ),
